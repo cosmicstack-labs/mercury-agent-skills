@@ -50,6 +50,7 @@ cp mercury-skills/categories/development/clean-code/SKILL.md .mercury/skills/
 | [Business](./categories/business/) | 6+ | Strategy, sales, negotiation, pricing |
 | [Automation](./categories/automation/) | 6+ | Workflows, scripts, browser automation |
 | [Data](./categories/data/) | 6+ | Pipelines, ETL, analytics, visualization |
+| [Shop & Restaurant](./categories/shop-restaurant/) | 8 | Inventory, menu engineering, scheduling, pricing, reviews, reporting |
 
 ## Skill Structure
 

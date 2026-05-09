@@ -88,8 +88,21 @@ Browse the full collection of Mercury Skills, organized by category.
 | Data Pipeline | Pipeline design, ETL, quality, monitoring | [SKILL.md](./categories/data/data-pipeline/SKILL.md) |
 | SQL Optimization | Query optimization, indexing, schema design | [SKILL.md](./categories/data/sql-optimization/SKILL.md) |
 
+## Shop & Restaurant
+
+| Skill | Description | File |
+|-------|-------------|------|
+| Inventory Optimizer | Smart stock management, par levels, and supplier ordering | [SKILL.md](./categories/shop-restaurant/inventory-optimizer/SKILL.md) |
+| Menu Engineer | Menu pricing, placement, and item profitability optimization | [SKILL.md](./categories/shop-restaurant/menu-engineer/SKILL.md) |
+| Staff Scheduler | Demand-driven shift scheduling with labor cost management | [SKILL.md](./categories/shop-restaurant/staff-scheduler/SKILL.md) |
+| Review Responder | Customer review monitoring, response drafting, and sentiment tracking | [SKILL.md](./categories/shop-restaurant/review-responder/SKILL.md) |
+| Daily Pulse | Daily sales reporting, P&L flash reports, and KPI anomaly alerts | [SKILL.md](./categories/shop-restaurant/daily-pulse/SKILL.md) |
+| Table Manager | Table turns, reservation optimization, waitlist and RevPASH maximization | [SKILL.md](./categories/shop-restaurant/table-manager/SKILL.md) |
+| Price Scout | Supplier price comparison, substitution analysis, and negotiation briefs | [SKILL.md](./categories/shop-restaurant/price-scout/SKILL.md) |
+| Social Post | Social media content generation, calendar planning, and engagement tracking | [SKILL.md](./categories/shop-restaurant/social-post/SKILL.md) |
+
 ---
 
-*Total: 24 skills across 12 categories*
+*Total: 32 skills across 13 categories*
 
 Want to add a skill? See [CONTRIBUTING.md](./CONTRIBUTING.md).
