@@ -7,8 +7,7 @@
 <p align="center">
   <a href="https://mercury.cosmicstack.org"><strong>🌐 Website</strong></a> •
   <a href="https://github.com/cosmicstack-labs/mercury-agent"><strong>🤖 Mercury Agent</strong></a> •
-  <a href="./CATALOG.md"><strong>📖 Skill Catalog</strong></a> •
-  <a href="https://cosmicstack.org"><strong>⚡ Cosmic Stack</strong></a>
+  <a href="./CATALOG.md"><strong>📖 Skill Catalog</strong></a>
 </p>
 
 **A curated collection of reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
