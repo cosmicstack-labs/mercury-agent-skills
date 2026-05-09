@@ -1,7 +1,7 @@
 # Mercury Skills 🪐
 
 <p align="center">
-  <img src="assets/mercury-agent-skills-card.png" alt="Mercury Skills">
+  <img src="assets/mercury-agent-skills-card.png" alt="Mercury Skills" width="75%" style="max-width: 700px; height: auto;">
 </p>
 
 <p align="center">
