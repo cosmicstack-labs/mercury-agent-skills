@@ -1,6 +1,13 @@
 # Mercury Skills Catalog
 
-Browse the full collection of Mercury Skills, organized by category.
+<p align="center">
+  <a href="https://mercury.cosmicstack.org"><strong>🌐 Website</strong></a> •
+  <a href="https://github.com/cosmicstack-labs/mercury-agent"><strong>🤖 Mercury Agent</strong></a> •
+  <a href="https://cosmicstack.org"><strong>⚡ Cosmic Stack</strong></a>
+</p>
+
+Browse the full collection of Mercury Skills, organized by category.  
+These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, or any `SKILL.md`-compatible AI agent.
 
 ---
 

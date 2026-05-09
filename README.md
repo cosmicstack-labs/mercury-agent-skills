@@ -1,8 +1,19 @@
 # Mercury Skills 🪐
 
-**A curated collection of reusable AI agent skills — installable, composable, and built for Mercury and beyond.**
+<p align="center">
+  <img src="assets/mercury-agent-skills-card.png" alt="Mercury Skills">
+</p>
 
-Mercury Skills is an open library of `SKILL.md` playbooks designed for AI coding agents. Whether you use Mercury, Claude Code, Cursor, Codex CLI, Gemini CLI, or any other agent-compatible tool — these skills give your AI structured expertise on demand.
+<p align="center">
+  <a href="https://mercury.cosmicstack.org"><strong>🌐 Website</strong></a> •
+  <a href="https://github.com/cosmicstack-labs/mercury-agent"><strong>🤖 Mercury Agent</strong></a> •
+  <a href="./CATALOG.md"><strong>📖 Skill Catalog</strong></a> •
+  <a href="https://cosmicstack.org"><strong>⚡ Cosmic Stack</strong></a>
+</p>
+
+**A curated collection of reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
+
+Mercury Skills is an open library of `SKILL.md` playbooks designed for AI coding agents. Whether you use [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, Codex CLI, Gemini CLI, or any other agent-compatible tool — these skills give your AI structured expertise on demand.
 
 ## Why Mercury Skills?
 
@@ -76,6 +87,34 @@ Full instructions, frameworks, scoring rubrics, and actionable guidance.
 
 ➡️ [Full Catalog → CATALOG.md](./CATALOG.md)
 
+## Try Mercury Agent
+
+[Mercury](https://mercury.cosmicstack.org) is the soul-driven AI agent these skills were built for. It features:
+
+- 🧠 **Second Brain** — Persistent memory that learns from every conversation
+- 🔧 **Skill System** — Load skills like these to gain instant expertise
+- 🔐 **Permission Guardrails** — Safe by design, auditable by default
+- 📊 **Token Budgets** — Stay in control of your AI usage costs
+- 📱 **Multi-Channel** — CLI, Telegram, or web — same agent everywhere
+
+```bash
+# Install Mercury Agent
+npm install -g @cosmicstack/mercury-agent
+
+# Use a skill
+mercury --skill categories/ai-ml/prompt-engineering/SKILL.md
+```
+
+> **[Get Started with Mercury →](https://mercury.cosmicstack.org/docs)**
+
+## The Cosmic Stack Ecosystem
+
+| Project | Description |
+|---------|-------------|
+| [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent) | Soul-driven AI agent with Second Brain, skills, and guardrails |
+| [Mercury Skills](https://github.com/cosmicstack-labs/mercury-skills) | 📍 You are here — reusable skill library for any AI agent |
+| [Battlefield](https://github.com/hotheadhacker/battlefield) | Agentic platform for task orchestration |
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on creating and submitting skills.
@@ -83,3 +122,9 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on creating and submitti
 ## License
 
 MIT — see [LICENSE](./LICENSE)
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by <a href="https://cosmicstack.org">Cosmic Stack</a></sub>
+</p>
