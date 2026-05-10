@@ -1,87 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mercury Skill Library</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Mercury Skill Library</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-brand" onclick="navigate('home')">
-                <span class="brand-icon">⚡</span>
-                <span class="brand-text">Mercury Skills</span>
-            </a>
-            <div class="nav-links">
-                <a href="#" onclick="navigate('home')">Explore</a>
-                <a href="#" onclick="showBookmarks()">Bookmarks</a>
-                <a href="https://github.com/cosmicstack-labs/mercury-agent-skills" target="_blank" class="nav-github">
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                    GitHub
-                </a>
-            </div>
-            <button class="nav-toggle" onclick="toggleMobile()">☰</button>
-        </div>
-    </nav>
 
-    <div id="app">
-        <!-- HOME VIEW -->
-        <div id="view-home" class="view active">
-            <section class="hero">
-                <div class="hero-bg"></div>
-                <div class="hero-content">
-                    <h1>Mercury Skill Library</h1>
-                    <p class="hero-subtitle">130+ agent-ready skills across 20 categories. Search, explore, install.</p>
-                    <div class="search-container">
-                        <span class="search-icon">🔍</span>
-                        <input type="text" id="search-input" placeholder="Search skills, categories, tags..." oninput="handleSearch(this.value)" autofocus />
-                        <span id="search-count" class="search-count"></span>
-                    </div>
-                    <div class="hero-stats">
-                        <span><strong id="total-skills">130</strong> Skills</span>
-                        <span><strong id="total-categories">20</strong> Categories</span>
-                        <span><strong id="total-installed">0</strong> Installed</span>
-                    </div>
-                </div>
-            </section>
+<!-- Navbar -->
+<nav class="navbar">
+<div class="nav-inner">
+<a href="#/home" class="nav-brand" onclick="navigate('home')">
+<span class="brand-icon">⚡</span>
+<span class="brand-text">Mercury Skills</span>
+</a>
+<div class="nav-links">
+<a href="#/home" class="nav-link" data-view="home" onclick="navigate('home')">Explore</a>
+<a href="#/bookmarks" class="nav-link" data-view="bookmarks" onclick="navigate('bookmarks')">Bookmarks</a>
+<a href="https://github.com/cosmicstack-labs/mercury-agent-skills" target="_blank" class="nav-github">
+<svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+GitHub
+</a>
+</div>
+<button class="nav-toggle" onclick="toggleMobile()">☰</button>
+</div>
+</nav>
 
-            <section class="section" id="trending-section">
-                <div class="section-header">
-                    <h2>🔥 Trending Skills</h2>
-                    <p class="section-desc">Most popular skills this month</p>
-                </div>
-                <div class="trending-grid" id="trending-grid"></div>
-            </section>
+<!-- App -->
+<div id="app">
 
-            <section class="section">
-                <div class="section-header">
-                    <h2>📂 All Categories</h2>
-                    <p class="section-desc">Browse by domain</p>
-                </div>
-                <div class="categories-grid" id="categories-grid"></div>
-            </section>
-        </div>
+<!-- HOME -->
+<div id="view-home" class="view active">
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<h1>Mercury Skill Library</h1>
+<p class="hero-subtitle">Agent-ready skills across 20+ categories. Search, explore, install.</p>
+<div class="search-container">
+<span class="search-icon">🔍</span>
+<input type="text" id="search-input" placeholder="Search skills, categories, tags... (press / to focus)" oninput="handleSearch(this.value)" autofocus />
+<span id="search-count" class="search-count"></span>
+</div>
+<div class="hero-stats">
+<span><strong id="total-skills">—</strong> Skills</span>
+<span><strong id="total-categories">—</strong> Categories</span>
+<span><strong id="total-installed">0</strong> Installed</span>
+</div>
+</div>
+</section>
 
-        <!-- DETAILS VIEW -->
-        <div id="view-details" class="view">
-            <button class="back-btn" onclick="navigate('home')">← Back to Library</button>
-            <div id="details-container"></div>
-        </div>
+<section class="section" id="trending-section">
+<div class="section-header">
+<h2>🔥 Trending</h2>
+<p class="section-desc">Most popular agent skills</p>
+</div>
+<div class="trending-grid" id="trending-grid"></div>
+</section>
 
-        <!-- BOOKMARKS VIEW -->
-        <div id="view-bookmarks" class="view">
-            <button class="back-btn" onclick="navigate('home')">← Back to Library</button>
-            <div class="section-header">
-                <h2>🔖 Your Bookmarks</h2>
-                <p class="section-desc">Skills you've liked and saved</p>
-            </div>
-            <div id="bookmarks-grid" class="bookmarks-grid"></div>
-        </div>
-    </div>
+<section class="section" id="categories-section">
+<div class="section-header">
+<h2>📂 Categories</h2>
+<p class="section-desc">Browse by domain</p>
+</div>
+<div class="categories-grid" id="categories-grid"></div>
+</section>
+</div>
 
-    <div id="toast" class="toast"></div>
-    <script src="app.js"></script>
+<!-- DETAILS -->
+<div id="view-details" class="view">
+<div class="back-bar">
+<button class="back-btn" onclick="navigate('home')">← Back to Library</button>
+</div>
+<div id="details-container"></div>
+</div>
+
+<!-- BOOKMARKS -->
+<div id="view-bookmarks" class="view">
+<div class="back-bar">
+<button class="back-btn" onclick="navigate('home')">← Back to Library</button>
+</div>
+<div class="section" style="padding-top:0">
+<div class="section-header">
+<h2>🔖 Bookmarks</h2>
+<p class="section-desc">Your saved skills</p>
+</div>
+<div id="bookmarks-grid" class="bookmarks-grid"></div>
+</div>
+</div>
+
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="footer-icon">⚡</span>
+<div>
+<div class="footer-title">Mercury Skill Library</div>
+<div class="footer-sub">Agent-native skill marketplace</div>
+</div>
+</div>
+<div class="footer-meta">
+<span>Developed by <strong>Mercury</strong></span>
+<span class="footer-divider">·</span>
+<span>Powered by <strong>Cosmic Stack</strong></span>
+</div>
+</div>
+<div class="footer-badge">🤖 Automatically developed &amp; managed by Mercury Agent · 2025</div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>

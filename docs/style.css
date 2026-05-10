@@ -47,4 +47,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .empty-state{text-align:center;padding:64px 24px;color:var(--tt)}.empty-state h3{font-size:20px;color:var(--ts);margin-bottom:8px}
 .bookmarks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .toast{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--bg-t);border:1px solid var(--bd);border-radius:var(--r8);padding:12px 20px;font-size:14px;color:var(--tp);box-shadow:var(--sl);transform:translateY(100px);opacity:0;transition:all .3s ease}.toast.show{transform:translateY(0);opacity:1}
-@media(max-width:768px){.hero h1{font-size:32px}.hero{padding:100px 16px 60px}.hero-stats{gap:16px;flex-wrap:wrap}.trending-grid,.categories-grid,.bookmarks-grid{grid-template-columns:1fr}.nav-links a:not(.nav-github){display:none}.nav-toggle{display:block}}
+/* Footer */
+.footer{margin-top:60px;padding:32px 24px;border-top:1px solid var(--bd);background:var(--bg-s)}
+.footer-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-brand{display:flex;align-items:center;gap:12px}.footer-icon{font-size:28px}
+.footer-title{font-weight:600;font-size:14px;color:var(--tp)}
+.footer-sub{font-size:12px;color:var(--tt)}
+.footer-meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ts)}
+.footer-meta strong{color:var(--tp)}
+.footer-divider{color:var(--tt)}
+.footer-badge{max-width:1280px;margin:12px auto 0;text-align:center;font-size:11px;color:var(--tt);letter-spacing:.5px;padding-top:12px;border-top:1px solid var(--bd)}
+
+/* Mobile Nav */
+@media(max-width:768px){
+  .hero h1{font-size:32px}.hero{padding:100px 16px 60px}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .trending-grid,.categories-grid,.bookmarks-grid{grid-template-columns:1fr}
+  .nav-links{position:fixed;top:60px;left:0;right:0;background:var(--bg-n);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);padding:8px;flex-direction:column;display:none}
+  .nav-links.open{display:flex}
+  .nav-links a:not(.nav-github){display:flex!important;padding:12px 16px}
+  .nav-github{margin-left:0!important;justify-content:center}
+  .nav-toggle{display:block}
+}
