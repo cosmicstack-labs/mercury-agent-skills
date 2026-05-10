@@ -41,7 +41,7 @@ categories/
 
 - **Skill directories**: Use kebab-case (e.g., `clean-code`, `api-design`)
 - **Skill names**: Use kebab-case in frontmatter (e.g., `clean-code`)
-- **Categories**: Use existing category names or suggest a new one
+- **Categories**: Use existing category names (development, frontend, backend, devops, ai-ml, security, product, marketing, design, business, automation, data, mobile, testing-qa, shop-restaurant, creative-personal-development, career, finance-legal, health-wellness, education-learning) or suggest a new one
 
 ### 5. Quality Checklist
 

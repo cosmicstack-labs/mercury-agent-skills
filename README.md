@@ -10,9 +10,11 @@
   <a href="./CATALOG.md"><strong>📖 Skill Catalog</strong></a>
 </p>
 
-**A curated collection of reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
+**A curated collection of 130+ reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
 
 Mercury Skills is an open library of `SKILL.md` playbooks designed for AI coding agents. Whether you use [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, Codex CLI, Gemini CLI, or any other agent-compatible tool — these skills give your AI structured expertise on demand.
+
+**130+ skills across 20 categories** — from development and DevOps to health, career, and education. Every skill is hand-crafted, production-ready, and universally compatible.
 
 ## Why Mercury Skills?
 
@@ -48,19 +50,26 @@ cp mercury-skills/categories/development/clean-code/SKILL.md .mercury/skills/
 
 | Category | Skills | Description |
 |----------|--------|-------------|
-| [Development](./categories/development/) | 10+ | Clean code, design patterns, testing, performance |
-| [Frontend](./categories/frontend/) | 10+ | React, Next.js, Tailwind, state management |
-| [Backend](./categories/backend/) | 10+ | APIs, databases, serverless, authentication |
-| [DevOps](./categories/devops/) | 8+ | Docker, CI/CD, infrastructure, monitoring |
-| [AI & ML](./categories/ai-ml/) | 10+ | AI agents, prompt engineering, LLM ops |
-| [Security](./categories/security/) | 6+ | Audit, OWASP, threat modeling, compliance |
-| [Product](./categories/product/) | 8+ | Strategy, research, prioritization, metrics |
-| [Marketing](./categories/marketing/) | 8+ | SEO, content, analytics, growth |
-| [Design](./categories/design/) | 6+ | UI, accessibility, design systems, UX |
-| [Business](./categories/business/) | 6+ | Strategy, sales, negotiation, pricing |
-| [Automation](./categories/automation/) | 6+ | Workflows, scripts, browser automation |
-| [Data](./categories/data/) | 6+ | Pipelines, ETL, analytics, visualization |
-| [Shop & Restaurant](./categories/shop-restaurant/) | 8 | Inventory, menu engineering, scheduling, pricing, reviews, reporting |
+| [Development](./categories/development/) | 9 | Clean code, code review, debugging, testing, ADRs, documentation, refactoring, dependency management |
+| [Frontend](./categories/frontend/) | 8 | React, Next.js, Tailwind, state management, testing, performance, responsive design, component systems |
+| [Backend](./categories/backend/) | 9 | APIs, Node.js, Python, database design, auth, serverless, microservices, caching, message queues |
+| [DevOps](./categories/devops/) | 9 | Docker, CI/CD, Kubernetes, Terraform, monitoring, cloud architecture, SRE, release management, GitOps |
+| [AI & ML](./categories/ai-ml/) | 10 | AI agents, prompt engineering, agent health, memory, delegation, handoffs, token budgets, error recovery, audit logging |
+| [Security](./categories/security/) | 7 | Audit, secure coding, threat modeling, API security, cloud security, supply chain, IAM |
+| [Product](./categories/product/) | 7 | Strategy, research, discovery, experimentation, metrics, roadmapping, GTM |
+| [Marketing](./categories/marketing/) | 8 | SEO, content, local business, social media, email, paid ads, brand strategy, content distribution |
+| [Design](./categories/design/) | 7 | UI systems, accessibility, UX research, prototyping, design thinking, visual design, motion |
+| [Business](./categories/business/) | 7 | Negotiation, startup strategy, financial modeling, sales, operations, hiring, fundraising |
+| [Automation](./categories/automation/) | 7 | Workflows, shell scripting, web scraping, test automation, data sync, deployment, RPA |
+| [Data](./categories/data/) | 7 | Pipelines, SQL optimization, data modeling, visualization, warehousing, governance, streaming |
+| [Mobile](./categories/mobile/) | 5 | iOS, Android, React Native, performance, App Store optimization |
+| [Testing & QA](./categories/testing-qa/) | 5 | Test strategy, E2E, performance testing, API testing, accessibility testing |
+| [Shop & Restaurant](./categories/shop-restaurant/) | 8 | Inventory, menu engineering, scheduling, reviews, daily pulse, table management, pricing, social |
+| [Creative & Personal Development](./categories/creative-personal-development/) | 8 | Storytelling, decisions, standups, notes, repurposing, branding, validation, time blocking |
+| [Career](./categories/career/) | 5 | Resume writing, interview prep, career planning, LinkedIn, salary negotiation |
+| [Finance & Legal](./categories/finance-legal/) | 5 | Financial analysis, budgeting, contracts, privacy compliance, risk management |
+| [Health & Wellness](./categories/health-wellness/) | 5 | Fitness, nutrition, mental health, sleep, habits |
+| [Education & Learning](./categories/education-learning/) | 5 | Curriculum design, learning science, teaching methods, assessment, micro-learning |
 
 ## Skill Structure
 
@@ -84,7 +93,7 @@ Full instructions, frameworks, scoring rubrics, and actionable guidance.
 
 ## Browse Skills
 
-➡️ [Full Catalog → CATALOG.md](./CATALOG.md)
+➡️ [Full Catalog → CATALOG.md](./CATALOG.md) — **130+ skills across 20 categories**
 
 ## Try Mercury Agent
 
