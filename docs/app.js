@@ -42,13 +42,20 @@ function toggleBkm(slug) {
   setBkm(a);
 }
 
+function cleanDesc(d) {
+  if (!d) return "";
+  let t = d;
+  if (t.startsWith("'") && t.endsWith("'")) t = t.slice(1, -1);
+  return t;
+}
+
 function skillCardHTML(s, trending) {
   const tags = (s.tags || []).slice(0, 3);
   const liked = isLiked(s.slug) ? "liked" : "";
   const bkm = isBkm(s.slug) ? "bookmarked" : "";
   const icon = s.icon || '⚡';
   const name = escHtml(s.name || '');
-  const desc = escHtml(s.description || '');
+  const desc = escHtml(cleanDesc(s.description)).replace(/^'(.*)'$/, '$1');
   const cat = escHtml(s.category || '');
   const slug = s.slug;
   const tagHtml = tags.map(t => '<span class="skill-tag">' + escHtml(t) + '</span>').join('');
@@ -119,6 +126,10 @@ function renderDetail(slug) {
   const liked = isLiked(s.slug) ? "liked" : "";
   const bkm = isBkm(s.slug) ? "bookmarked" : "";
   const icon = s.icon || '⚡';
+  let descHTML = cleanDesc(s.description || "");
+  if (descHTML && typeof marked !== "undefined") {
+    try { descHTML = marked.parse(descHTML); } catch(e) { descHTML = escHtml(descHTML); }
+  } else if (descHTML) { descHTML = escHtml(descHTML); }
   let bodyHTML = "";
   if (s.body) {
     if (typeof marked !== "undefined") {
@@ -141,7 +152,7 @@ function renderDetail(slug) {
     + '<button class="details-action-btn ' + liked + '" onclick="toggleLike(\'' + s.slug + '\');renderDetail(\'' + s.slug + '\')">❤️ ' + (liked ? 'Liked' : 'Like') + '</button>'
     + '<button class="details-action-btn ' + bkm + '" onclick="toggleBkm(\'' + s.slug + '\');renderDetail(\'' + s.slug + '\')">🔖 ' + (bkm ? 'Bookmarked' : 'Bookmark') + '</button>'
     + '</div></div></div>'
-    + (s.description ? '<div class="details-description">' + escHtml(s.description) + '</div>' : '')
+    + (descHTML ? '<div class="details-description">' + descHTML + '</div>' : '')
     + (tagHtml ? '<div class="details-meta" style="margin-bottom:16px">' + tagHtml + '</div>' : '')
     + (bodyHTML ? '<div class="details-body">' + bodyHTML + '</div>' : '')
     + '<div class="details-install">'
