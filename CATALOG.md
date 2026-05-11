@@ -151,6 +151,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Workflow Automation | Workflow design, n8n patterns, triggers | [SKILL.md](./categories/automation/workflow-automation/SKILL.md) |
 | Shell Scripting | Scripting best practices, error handling | [SKILL.md](./categories/automation/shell-scripting/SKILL.md) |
 | Web Scraping | Playwright/Puppeteer patterns, anti-detection, pagination, data extraction, and rate limiting | [SKILL.md](./categories/automation/web-scraping/SKILL.md) |
+| X/Twitter Automation | Safe tweet search, reply reads, monitoring, and action-gated posting workflows with Hermes Tweet | [SKILL.md](./categories/automation/x-twitter-automation/SKILL.md) |
 | Test Automation | Framework selection, page object model, data-driven testing, parallel execution, and CI integration | [SKILL.md](./categories/automation/test-automation/SKILL.md) |
 | Data Sync | ETL patterns, change data capture, API sync, file-based sync, and conflict resolution | [SKILL.md](./categories/automation/data-sync/SKILL.md) |
 | Deployment Automation | Zero-downtime deployments, blue/green, canary, rolling updates, and rollback automation | [SKILL.md](./categories/automation/deployment-automation/SKILL.md) |
