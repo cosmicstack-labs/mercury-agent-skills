@@ -9,7 +9,7 @@
 Browse the full collection of Mercury Skills, organized by category.  
 These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, or any `SKILL.md`-compatible AI agent.
 
-**130+ skills across 20 categories.**
+**146+ skills across 23 categories.**
 
 ---
 
