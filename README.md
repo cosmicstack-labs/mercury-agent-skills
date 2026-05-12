@@ -60,7 +60,7 @@ cp mercury-skills/categories/development/clean-code/SKILL.md .mercury/skills/
 | [Marketing](./categories/marketing/) | 8 | SEO, content, local business, social media, email, paid ads, brand strategy, content distribution |
 | [Design](./categories/design/) | 7 | UI systems, accessibility, UX research, prototyping, design thinking, visual design, motion |
 | [Business](./categories/business/) | 7 | Negotiation, startup strategy, financial modeling, sales, operations, hiring, fundraising |
-| [Automation](./categories/automation/) | 7 | Workflows, shell scripting, web scraping, test automation, data sync, deployment, RPA |
+| [Automation](./categories/automation/) | 8 | Workflows, shell scripting, web scraping, X/Twitter automation, test automation, data sync, deployment, RPA |
 | [Data](./categories/data/) | 7 | Pipelines, SQL optimization, data modeling, visualization, warehousing, governance, streaming |
 | [Mobile](./categories/mobile/) | 5 | iOS, Android, React Native, performance, App Store optimization |
 | [Testing & QA](./categories/testing-qa/) | 5 | Test strategy, E2E, performance testing, API testing, accessibility testing |
