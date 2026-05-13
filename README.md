@@ -10,11 +10,11 @@
   <a href="./CATALOG.md"><strong>📖 Skill Catalog</strong></a>
 </p>
 
-**A curated collection of 130+ reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
+**A curated collection of 131+ reusable AI agent skills — installable, composable, and built for [Mercury](https://mercury.cosmicstack.org) and beyond.**
 
 Mercury Skills is an open library of `SKILL.md` playbooks designed for AI coding agents. Whether you use [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, Codex CLI, Gemini CLI, or any other agent-compatible tool — these skills give your AI structured expertise on demand.
 
-**130+ skills across 20 categories** — from development and DevOps to health, career, and education. Every skill is hand-crafted, production-ready, and universally compatible.
+**131+ skills across 20 categories** — from development and DevOps to health, career, and education. Every skill is hand-crafted, production-ready, and universally compatible.
 
 ## Why Mercury Skills?
 
@@ -64,7 +64,7 @@ cp mercury-skills/categories/development/clean-code/SKILL.md .mercury/skills/
 | [Data](./categories/data/) | 7 | Pipelines, SQL optimization, data modeling, visualization, warehousing, governance, streaming |
 | [Mobile](./categories/mobile/) | 5 | iOS, Android, React Native, performance, App Store optimization |
 | [Testing & QA](./categories/testing-qa/) | 5 | Test strategy, E2E, performance testing, API testing, accessibility testing |
-| [Shop & Restaurant](./categories/shop-restaurant/) | 8 | Inventory, menu engineering, scheduling, reviews, daily pulse, table management, pricing, social |
+| [Shop & Restaurant](./categories/shop-restaurant/) | 9 | Inventory, menu engineering, scheduling, reviews, daily pulse, table management, pricing, social, Zomato ordering |
 | [Creative & Personal Development](./categories/creative-personal-development/) | 8 | Storytelling, decisions, standups, notes, repurposing, branding, validation, time blocking |
 | [Career](./categories/career/) | 5 | Resume writing, interview prep, career planning, LinkedIn, salary negotiation |
 | [Finance & Legal](./categories/finance-legal/) | 5 | Financial analysis, budgeting, contracts, privacy compliance, risk management |

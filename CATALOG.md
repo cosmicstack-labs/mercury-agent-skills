@@ -9,7 +9,7 @@
 Browse the full collection of Mercury Skills, organized by category.  
 These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercury-agent), Claude Code, Cursor, or any `SKILL.md`-compatible AI agent.
 
-**146+ skills across 23 categories.**
+**147+ skills across 23 categories.**
 
 ---
 
@@ -201,6 +201,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Table Manager | Table turns, reservation optimization, waitlist and RevPASH maximization | [SKILL.md](./categories/shop-restaurant/table-manager/SKILL.md) |
 | Price Scout | Supplier price comparison, substitution analysis, and negotiation briefs | [SKILL.md](./categories/shop-restaurant/price-scout/SKILL.md) |
 | Social Post | Social media content generation, calendar planning, and engagement tracking | [SKILL.md](./categories/shop-restaurant/social-post/SKILL.md) |
+| Zomato Order | Browser-automated Zomato ordering with cookie-based session reuse and payment link sharing | [SKILL.md](./categories/shop-restaurant/zomato-order/SKILL.md) |
 
 ## Creative & Personal Development
 
