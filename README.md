@@ -1,5 +1,11 @@
 # Mercury Skills 🪐
 
+> **✨ 本仓库新增**（Mayx07 贡献）：
+> - [GBrain Lite](./categories/ai-ml/gbrain-lite/SKILL.md) — AI Agent 轻量知识库，markdown + YAML frontmatter + 全文搜索 + 交叉引用
+> - [Daily Briefing](./categories/automation/daily-briefing/SKILL.md) — 每日 AI 语音播报，多源采集 → 知识库去重 → AI 整理 → TTS 合成
+>
+> 两个技能均含评分量表和踩坑记录，已在 Hermes Agent 生产环境验证。
+
 <p align="center">
   <img src="assets/mercury-agent-skills-card.png" alt="Mercury Skills" width="75%" style="max-width: 700px; height: auto;">
 </p>

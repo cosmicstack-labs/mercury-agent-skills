@@ -81,7 +81,8 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Agent Handoff Protocols | Agent-to-agent handoff, context passing, escalation chains, and conversation continuity | [SKILL.md](./categories/ai-ml/agent-handoff-protocols/SKILL.md) |
 | Token Budget Tracking | Real-time token tracking, per-agent budget enforcement, cost attribution, and proactive optimization | [SKILL.md](./categories/ai-ml/token-budget-tracking/SKILL.md) |
 | Error Recovery & Retry | Exponential backoff, circuit breakers, stateful recovery, graceful degradation, and dead-letter queues | [SKILL.md](./categories/ai-ml/error-recovery-retry/SKILL.md) |
-| Agent Audit Logging | Structured audit events, traceability chains, compliance reporting, forensic analysis, and retention policies | [SKILL.md](./categories/ai-ml/agent-audit-logging/SKILL.md) |
+|| Agent Audit Logging | Structured audit events, traceability chains, compliance reporting, forensic analysis, and retention policies | [SKILL.md](./categories/ai-ml/agent-audit-logging/SKILL.md) |
+|| GBrain Lite | Lightweight personal knowledge base with markdown + YAML frontmatter, full-text search, and cross-referencing for AI agents | [SKILL.md](./categories/ai-ml/gbrain-lite/SKILL.md) |
 
 ## Security
 
@@ -155,7 +156,8 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Test Automation | Framework selection, page object model, data-driven testing, parallel execution, and CI integration | [SKILL.md](./categories/automation/test-automation/SKILL.md) |
 | Data Sync | ETL patterns, change data capture, API sync, file-based sync, and conflict resolution | [SKILL.md](./categories/automation/data-sync/SKILL.md) |
 | Deployment Automation | Zero-downtime deployments, blue/green, canary, rolling updates, and rollback automation | [SKILL.md](./categories/automation/deployment-automation/SKILL.md) |
-| Robotic Process Automation | Bot design, UI automation, OCR, attended vs unattended bots, and RPA governance | [SKILL.md](./categories/automation/rpa/SKILL.md) |
+|| Robotic Process Automation | Bot design, UI automation, OCR, attended vs unattended bots, and RPA governance | [SKILL.md](./categories/automation/rpa/SKILL.md) |
+|| Daily Briefing | Automated daily tech briefing with multi-source collection, knowledge-base deduplication, AI summarization, and TTS speech synthesis | [SKILL.md](./categories/automation/daily-briefing/SKILL.md) |
 
 ## Data
 
