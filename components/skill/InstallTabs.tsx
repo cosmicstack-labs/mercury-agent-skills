@@ -20,17 +20,15 @@ interface Props {
 interface Tab {
   key: AgentKey;
   label: string;
-  /** Single character "lockup" — keeps the tab strip dense and recognizable. */
-  glyph: string;
 }
 
 const TABS: Tab[] = [
-  { key: "mercury", label: "Mercury", glyph: "M" },
-  { key: "claude", label: "Claude Code", glyph: "C" },
-  { key: "codex", label: "Codex", glyph: "X" },
-  { key: "openclaw", label: "OpenClaw", glyph: "O" },
-  { key: "hermes", label: "Hermes", glyph: "H" },
-  { key: "other", label: "Other", glyph: "•" },
+  { key: "mercury", label: "Mercury" },
+  { key: "claude", label: "Claude Code" },
+  { key: "codex", label: "Codex" },
+  { key: "openclaw", label: "OpenClaw" },
+  { key: "hermes", label: "Hermes" },
+  { key: "other", label: "Other" },
 ];
 
 interface Step {
@@ -54,8 +52,8 @@ function buildSteps(active: AgentKey, ctx: { skillId: string; skillName: string;
           hint: (
             <>
               Lands in <Code>~/.mercury/skills/</Code>. Requires the{" "}
-              <Inline href="https://github.com/cosmicstack-labs/mercury-agent-skills">
-                Mercury CLI
+              <Inline href="https://github.com/cosmicstack-labs/mercury-agent">
+                Mercury agent
               </Inline>
               .
             </>
@@ -198,7 +196,7 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
                   setActive(next.key);
                 }
               }}
-              className={`relative z-10 flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs transition-colors ${
+              className={`relative z-10 px-2.5 py-1.5 rounded-md text-xs transition-colors ${
                 isActive
                   ? "text-[color:var(--color-brand)] font-medium"
                   : "text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)]"
@@ -212,9 +210,6 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
                   aria-hidden
                 />
               )}
-              <span className="relative font-mono text-[10px] w-3.5 text-center opacity-70">
-                {t.glyph}
-              </span>
               <span className="relative">{t.label}</span>
             </button>
           );

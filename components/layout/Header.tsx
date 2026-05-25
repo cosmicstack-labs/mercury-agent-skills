@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookmarkIcon, TrophyIcon, GithubIcon } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2 font-semibold tracking-tight shrink-0"
         >
-          <span className="inline-block w-5 h-5 rounded-full bg-[color:var(--color-brand)]" />
+          <Logo size={22} />
           <span className="text-[15px] sm:text-base">Mercury Skills</span>
         </Link>
         <nav className="flex items-center gap-0.5 sm:gap-1 text-sm text-[color:var(--color-fg-muted)]">

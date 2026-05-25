@@ -29,14 +29,29 @@ export const metadata: Metadata = {
     url: "https://skills.mercuryagent.sh",
     siteName: "Mercury Skills",
     type: "website",
+    // og:image is supplied by app/opengraph-image.tsx (dynamic 1200x630 card)
+    // and overridden per-skill by app/skills/[...slug]/opengraph-image.tsx.
   },
   twitter: {
     card: "summary_large_image",
     title: "Mercury Skills",
     description: "Curated, open-source skills for the Mercury Agent.",
+    // twitter:image mirrors og:image automatically from the convention files.
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      {
+        url: "/logo-dark.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+      },
+      {
+        url: "/logo-light.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+      },
+    ],
+    apple: "/logo-dark.png",
   },
 };
 

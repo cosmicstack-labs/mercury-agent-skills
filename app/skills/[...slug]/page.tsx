@@ -8,9 +8,10 @@ import {
 } from "@/lib/skills";
 import { storage } from "@/lib/storage";
 import { Markdown } from "@/lib/mdx";
-import { Github, Clock, User, Tag } from "lucide-react";
+import { Github, User, Tag, ShieldAlert } from "lucide-react";
 import LikeButton from "@/components/skill/LikeButton";
 import BookmarkButton from "@/components/skill/BookmarkButton";
+import ShareMenu from "@/components/skill/ShareMenu";
 import InstallTabs from "@/components/skill/InstallTabs";
 import SkillCard from "@/components/skill/SkillCard";
 
@@ -29,13 +30,30 @@ export async function generateMetadata({
   const id = slug.join("/");
   const skill = getSkillById(id);
   if (!skill) return {};
+  const url = `https://skills.mercuryagent.sh/skills/${id}`;
+  // Per-skill OG image is generated dynamically by app/api/og/skill/route.tsx
+  // (route handler instead of the file-convention because Next 16 forbids
+  // `opengraph-image.tsx` inside catch-all segments). The handler emits
+  // immutable Cache-Control headers so the CDN serves the same PNG for the
+  // lifetime of the build.
+  const ogImage = `https://skills.mercuryagent.sh/api/og/skill?id=${encodeURIComponent(id)}`;
   return {
     title: skill.title,
     description: skill.description,
+    alternates: { canonical: url },
     openGraph: {
+      type: "article",
       title: skill.title,
       description: skill.description,
-      url: `https://skills.mercuryagent.sh/skills/${id}`,
+      url,
+      siteName: "Mercury Skills",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: skill.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: skill.title,
+      description: skill.description,
+      images: [ogImage],
     },
   };
 }
@@ -76,18 +94,16 @@ export default async function SkillPage({
         {/* Main */}
         <div className="min-w-0">
           <header className="space-y-5 pb-8 border-b border-[color:var(--color-border)]">
-            <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[color:var(--color-fg-subtle)]">
-              <span className="uppercase tracking-wider">{skill.category}</span>
-              {skill.version && <span>v{skill.version}</span>}
-              <span className="inline-flex items-center gap-1">
-                <Clock className="w-3 h-3" /> {skill.readingTime} min read
-              </span>
-              {skill.author && (
-                <span className="inline-flex items-center gap-1">
-                  <User className="w-3 h-3" /> {skill.author}
-                </span>
-              )}
-            </div>
+            {(skill.version || skill.author) && (
+              <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[color:var(--color-fg-subtle)]">
+                {skill.version && <span>v{skill.version}</span>}
+                {skill.author && (
+                  <span className="inline-flex items-center gap-1">
+                    <User className="w-3 h-3" /> {skill.author}
+                  </span>
+                )}
+              </div>
+            )}
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
               {skill.title}
             </h1>
@@ -97,6 +113,12 @@ export default async function SkillPage({
             <div className="flex flex-wrap items-center gap-2 pt-2">
               <LikeButton id={skill.id} initial={stats.likes} />
               <BookmarkButton id={skill.id} />
+              <ShareMenu
+                url={`https://skills.mercuryagent.sh/skills/${skill.id}`}
+                title={skill.title}
+                description={skill.description}
+                imageUrl={`/api/og/skill?id=${encodeURIComponent(skill.id)}`}
+              />
               <a
                 href={skill.githubUrl}
                 target="_blank"
@@ -125,7 +147,8 @@ export default async function SkillPage({
             )}
           </header>
 
-          <div className="pt-10">
+          <div className="pt-10 space-y-6">
+            <ReviewNotice />
             <Markdown source={body} />
           </div>
         </div>
@@ -206,5 +229,22 @@ export default async function SkillPage({
         </div>
       </section>
     </article>
+  );
+}
+
+function ReviewNotice() {
+  return (
+    <aside
+      role="note"
+      className="flex items-start gap-3 px-4 py-3 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)]"
+    >
+      <ShieldAlert className="w-4 h-4 mt-0.5 shrink-0 text-[color:var(--color-brand)]" />
+      <div className="text-xs leading-relaxed text-[color:var(--color-fg-muted)]">
+        <span className="text-[color:var(--color-fg)] font-medium">Review before you ship.</span>{" "}
+        Skills in this library are community-contributed and aren&apos;t audited by us.
+        Read the SKILL.md, check any commands it asks your agent to run, and confirm it
+        fits your use case before installing into a real environment.
+      </div>
+    </aside>
   );
 }

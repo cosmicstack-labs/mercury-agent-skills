@@ -135,16 +135,22 @@ body {
   margin: 1.1rem 0;
 }
 
-/* Shiki dual-theme: pick the right color per active theme */
+/* Shiki dual-theme: only switch the foreground color per active theme.
+   Never paint per-token backgrounds — that produces the "selected text"
+   rectangles users were seeing in dark mode. The <pre> element owns the
+   single background. */
 .prose pre,
+.prose pre code,
 .prose pre span {
+  background-color: transparent !important;
   color: var(--shiki-dark);
-  background-color: var(--shiki-dark-bg);
 }
-:root.light .prose pre,
+.prose pre {
+  background-color: var(--color-bg-elev) !important;
+}
+:root.light .prose pre code,
 :root.light .prose pre span {
   color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
 }
 
 .prose code {

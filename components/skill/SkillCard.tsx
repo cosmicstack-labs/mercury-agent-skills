@@ -14,7 +14,7 @@ export default function SkillCard({ skill, stats }: Props) {
     >
       <div className="flex items-center justify-between text-[11px] uppercase tracking-wider text-[color:var(--color-fg-subtle)]">
         <span>{skill.category}</span>
-        <span className="font-mono">{skill.readingTime} min</span>
+        {skill.version && <span className="font-mono">v{skill.version}</span>}
       </div>
       <h3 className="text-lg font-semibold text-[color:var(--color-fg)] leading-snug tracking-tight">
         {skill.title}
