@@ -42,11 +42,12 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
         Install
       </div>
 
-      {/* Tab strip */}
+      {/* Tab strip — underlined active tab in brand color, muted inactives.
+          Only one tab is "active" at a time (mutually exclusive). */}
       <div
         role="tablist"
         aria-label="Install instructions per agent"
-        className="flex flex-wrap gap-1 p-1 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)]"
+        className="flex flex-wrap items-center gap-x-1 gap-y-0 border-b border-[color:var(--color-border)] -mx-0.5"
       >
         {TABS.map((t) => {
           const isActive = t.key === active;
@@ -57,11 +58,12 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
               aria-selected={isActive}
               aria-controls={`install-panel-${t.key}`}
               id={`install-tab-${t.key}`}
+              tabIndex={isActive ? 0 : -1}
               onClick={() => setActive(t.key)}
-              className={`text-xs px-2.5 py-1.5 rounded-md transition-colors ${
+              className={`relative text-xs px-2.5 py-2 -mb-px border-b-2 transition-colors ${
                 isActive
-                  ? "bg-[color:var(--color-bg-elev-2)] text-[color:var(--color-fg)] border border-[color:var(--color-border-strong)]"
-                  : "text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)] border border-transparent"
+                  ? "text-[color:var(--color-brand)] border-[color:var(--color-brand)] font-medium"
+                  : "text-[color:var(--color-fg-muted)] border-transparent hover:text-[color:var(--color-fg)]"
               }`}
             >
               {t.label}

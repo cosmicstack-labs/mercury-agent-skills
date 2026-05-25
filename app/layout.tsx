@@ -1,8 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#08090b" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfbfa" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://skills.mercuryagent.sh"),

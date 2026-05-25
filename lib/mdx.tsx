@@ -62,9 +62,14 @@ const headingFactory = (level: 1 | 2 | 3 | 4) => {
   return function Heading({ children }: { children?: ReactNode }) {
     const id = slugify(flattenChildren(children));
     return (
-      <Tag id={id}>
-        <a href={`#${id}`} className="no-underline hover:opacity-80">
-          {children}
+      <Tag id={id} className="heading-anchor group">
+        {children}
+        <a
+          href={`#${id}`}
+          aria-label="Link to this section"
+          className="heading-anchor-link"
+        >
+          #
         </a>
       </Tag>
     );

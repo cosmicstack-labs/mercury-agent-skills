@@ -21,18 +21,18 @@ export default async function HomePage() {
       <section className="relative overflow-hidden border-b border-[color:var(--color-border)]">
         <div className="absolute inset-0 bg-dotted opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[color:var(--color-bg)]" />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="flex flex-col items-center text-center gap-7 max-w-3xl mx-auto">
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20 md:py-28">
+          <div className="flex flex-col items-center text-center gap-6 sm:gap-7 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)] text-[color:var(--color-fg-muted)]">
               <Sparkles className="w-3 h-3" />
               {allSkills.length} skills · {categories.length} categories
             </div>
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.02]">
+            <h1 className="text-[2.25rem] sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] sm:leading-[1.02] [text-wrap:balance]">
               Skills for the
               <br />
               <span className="text-[color:var(--color-brand)]">Mercury Agent.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[color:var(--color-fg-muted)] max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-[color:var(--color-fg-muted)] max-w-2xl leading-relaxed">
               A curated, open-source library of capabilities you can browse, bookmark, and install
               directly from the Mercury CLI.
             </p>
@@ -56,14 +56,14 @@ export default async function HomePage() {
       </section>
 
       {/* Trending */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
         <SectionHeader
           icon={<TrendingUp className="w-4 h-4" />}
           title="Trending skills"
           subtitle="Ranked by likes & downloads from the community."
           href="/leaderboard"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 sm:mt-8">
           {top.map((s) => (
             <SkillCard key={s.id} skill={s} stats={statsMap[s.id]} />
           ))}
@@ -71,13 +71,13 @@ export default async function HomePage() {
       </section>
 
       {/* Categories */}
-      <section className="mx-auto max-w-6xl px-6 py-16 border-t border-[color:var(--color-border)]">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16 border-t border-[color:var(--color-border)]">
         <SectionHeader
           icon={<Layers className="w-4 h-4" />}
           title="Browse by category"
           subtitle={`${categories.length} curated categories of agent capabilities.`}
         />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3 mt-6 sm:mt-8">
           {categories.map((c) => (
             <Link
               key={c.slug}
