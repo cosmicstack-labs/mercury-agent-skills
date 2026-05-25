@@ -11,7 +11,7 @@ import { Markdown } from "@/lib/mdx";
 import { Github, Clock, User, Tag } from "lucide-react";
 import LikeButton from "@/components/skill/LikeButton";
 import BookmarkButton from "@/components/skill/BookmarkButton";
-import CopyCommand from "@/components/skill/CopyCommand";
+import InstallTabs from "@/components/skill/InstallTabs";
 import SkillCard from "@/components/skill/SkillCard";
 
 export const revalidate = 120;
@@ -132,24 +132,11 @@ export default async function SkillPage({
 
         {/* Sidebar */}
         <aside className="space-y-8 lg:sticky lg:top-20 lg:self-start">
-          <div className="space-y-2">
-            <div className="text-[11px] uppercase font-mono tracking-wider text-[color:var(--color-fg-subtle)]">
-              Install
-            </div>
-            <CopyCommand command={`mercury skills install ${skill.id}`} />
-            <p className="text-xs text-[color:var(--color-fg-subtle)] leading-relaxed">
-              Requires the{" "}
-              <a
-                href="https://github.com/cosmicstack-labs/mercury-agent-skills"
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                Mercury CLI
-              </a>
-              .
-            </p>
-          </div>
+          <InstallTabs
+            skillId={skill.id}
+            skillName={skill.name}
+            pageUrl={`https://skills.mercuryagent.sh/skills/${skill.id}`}
+          />
 
           {skill.headings.length > 1 && (
             <div className="space-y-2">
