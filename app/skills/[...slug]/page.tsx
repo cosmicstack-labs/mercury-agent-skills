@@ -88,10 +88,10 @@ export default async function SkillPage({
                 </span>
               )}
             </div>
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
               {skill.title}
             </h1>
-            <p className="text-base text-[color:var(--color-fg-muted)] leading-relaxed max-w-3xl">
+            <p className="text-lg text-[color:var(--color-fg-muted)] leading-relaxed max-w-3xl">
               {skill.description}
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-2">
@@ -204,7 +204,7 @@ export default async function SkillPage({
       {/* More from category */}
       <section className="mt-20 pt-10 border-t border-[color:var(--color-border)]">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-lg font-semibold">More in {skill.category}</h2>
+          <h2 className="text-xl font-semibold tracking-tight">More in {skill.category}</h2>
           <Link
             href={`/category/${skill.categorySlug}`}
             className="text-xs text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)]"

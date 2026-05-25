@@ -54,12 +54,20 @@ function scoreDoc(doc: Doc, q: string): number {
   return score;
 }
 
-export default function SearchBox({ autoFocus = false }: { autoFocus?: boolean }) {
+export default function SearchBox({
+  autoFocus = false,
+  size = "md",
+}: {
+  autoFocus?: boolean;
+  size?: "md" | "lg";
+}) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+
+  const isLg = size === "lg";
 
   const results = useMemo(() => {
     if (!q.trim()) return [];
@@ -106,9 +114,23 @@ export default function SearchBox({ autoFocus = false }: { autoFocus?: boolean }
   }
 
   return (
-    <div className="relative w-full max-w-2xl">
-      <div className="flex items-center gap-3 rounded-lg border border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-elev)] focus-within:border-[color:var(--color-brand)] transition-colors px-4 py-3">
-        <SearchIcon className="w-4 h-4 text-[color:var(--color-fg-subtle)]" />
+    <div className={`relative w-full ${isLg ? "max-w-3xl" : "max-w-2xl"}`}>
+      {isLg && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-2 rounded-2xl bg-[radial-gradient(ellipse_at_center,var(--color-brand)_0%,transparent_60%)] opacity-[0.12] blur-2xl"
+        />
+      )}
+      <div
+        className={`relative flex items-center gap-3 rounded-xl border bg-[color:var(--color-bg-elev)] focus-within:border-[color:var(--color-brand)] focus-within:ring-2 focus-within:ring-[color:var(--color-brand)]/30 transition-all ${
+          isLg
+            ? "border-[color:var(--color-border-strong)] px-5 py-4 shadow-xl shadow-black/20"
+            : "border-[color:var(--color-border-strong)] px-4 py-3"
+        }`}
+      >
+        <SearchIcon
+          className={`text-[color:var(--color-fg-subtle)] ${isLg ? "w-5 h-5" : "w-4 h-4"}`}
+        />
         <input
           ref={inputRef}
           autoFocus={autoFocus}
@@ -118,10 +140,18 @@ export default function SearchBox({ autoFocus = false }: { autoFocus?: boolean }
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 120)}
           onKeyDown={onKeyDown}
-          placeholder="Search skills, tags, categories…"
-          className="flex-1 bg-transparent outline-none text-[15px] placeholder:text-[color:var(--color-fg-subtle)]"
+          placeholder={
+            isLg ? "Search 126 skills, tags, categories…" : "Search skills, tags, categories…"
+          }
+          className={`flex-1 bg-transparent outline-none placeholder:text-[color:var(--color-fg-subtle)] ${
+            isLg ? "text-lg" : "text-[15px]"
+          }`}
         />
-        <kbd className="hidden sm:inline-block text-[10px] font-mono px-1.5 py-0.5 rounded border border-[color:var(--color-border)] text-[color:var(--color-fg-subtle)]">
+        <kbd
+          className={`hidden sm:inline-block font-mono rounded border border-[color:var(--color-border)] text-[color:var(--color-fg-subtle)] ${
+            isLg ? "text-xs px-2 py-1" : "text-[10px] px-1.5 py-0.5"
+          }`}
+        >
           ⌘K
         </kbd>
       </div>

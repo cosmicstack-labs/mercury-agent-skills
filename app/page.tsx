@@ -22,30 +22,30 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-dotted opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[color:var(--color-bg)]" />
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="flex flex-col items-start gap-6 max-w-3xl">
+          <div className="flex flex-col items-center text-center gap-7 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)] text-[color:var(--color-fg-muted)]">
               <Sparkles className="w-3 h-3" />
               {allSkills.length} skills · {categories.length} categories
             </div>
-            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.02]">
               Skills for the
               <br />
               <span className="text-[color:var(--color-brand)]">Mercury Agent.</span>
             </h1>
-            <p className="text-lg text-[color:var(--color-fg-muted)] max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[color:var(--color-fg-muted)] max-w-2xl leading-relaxed">
               A curated, open-source library of capabilities you can browse, bookmark, and install
-              directly from the Mercury CLI. Search across {allSkills.length} skills below.
+              directly from the Mercury CLI.
             </p>
-            <div className="w-full mt-2">
-              <SearchBox autoFocus />
+            <div className="w-full max-w-2xl mt-2 flex justify-center">
+              <SearchBox autoFocus size="lg" />
             </div>
-            <div className="flex items-center gap-3 text-xs text-[color:var(--color-fg-subtle)] font-mono">
-              <span>Try:</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-[color:var(--color-fg-subtle)] font-mono">
+              <span className="mr-1">Try:</span>
               {["react patterns", "audit logging", "habit formation", "tailwind"].map((q) => (
                 <Link
                   key={q}
                   href={`/?q=${encodeURIComponent(q)}`}
-                  className="px-2 py-1 rounded border border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] hover:text-[color:var(--color-fg-muted)]"
+                  className="px-2.5 py-1 rounded-full border border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] hover:text-[color:var(--color-fg-muted)] transition-colors"
                 >
                   {q}
                 </Link>
@@ -85,8 +85,8 @@ export default async function HomePage() {
               className="group flex items-center justify-between px-4 py-3 rounded-lg border border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] hover:bg-[color:var(--color-bg-elev)] transition-colors"
             >
               <div>
-                <div className="text-sm font-medium">{c.name}</div>
-                <div className="text-xs text-[color:var(--color-fg-subtle)] font-mono mt-0.5">
+                <div className="text-base font-medium">{c.name}</div>
+                <div className="text-xs text-[color:var(--color-fg-subtle)] font-mono mt-1">
                   {c.count} skill{c.count === 1 ? "" : "s"}
                 </div>
               </div>
@@ -113,10 +113,10 @@ export default async function HomePage() {
             <div className="text-xs uppercase tracking-wider font-mono text-[color:var(--color-fg-subtle)]">
               CLI
             </div>
-            <h3 className="text-2xl font-semibold tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
               Install skills from your terminal
             </h3>
-            <p className="text-sm text-[color:var(--color-fg-muted)] max-w-xl">
+            <p className="text-base text-[color:var(--color-fg-muted)] max-w-xl leading-relaxed">
               The Mercury CLI consumes the same registry that powers this site. Search, install, and
               update skills without leaving your editor.
             </p>
@@ -150,7 +150,7 @@ function SectionHeader({
           <span>{title}</span>
         </div>
         {subtitle && (
-          <p className="text-sm text-[color:var(--color-fg-muted)]">{subtitle}</p>
+          <p className="text-base text-[color:var(--color-fg-muted)]">{subtitle}</p>
         )}
       </div>
       {href && (

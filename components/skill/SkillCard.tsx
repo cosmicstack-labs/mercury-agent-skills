@@ -16,10 +16,10 @@ export default function SkillCard({ skill, stats }: Props) {
         <span>{skill.category}</span>
         <span className="font-mono">{skill.readingTime} min</span>
       </div>
-      <h3 className="text-base font-medium text-[color:var(--color-fg)] leading-snug">
+      <h3 className="text-lg font-semibold text-[color:var(--color-fg)] leading-snug tracking-tight">
         {skill.title}
       </h3>
-      <p className="text-sm text-[color:var(--color-fg-muted)] line-clamp-3 leading-relaxed">
+      <p className="text-[15px] text-[color:var(--color-fg-muted)] line-clamp-3 leading-relaxed">
         {skill.description}
       </p>
       <div className="mt-auto flex items-center justify-between pt-2">

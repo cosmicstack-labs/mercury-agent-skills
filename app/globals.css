@@ -34,9 +34,13 @@
   --color-bg-elev-2: #14171c;
   --color-border: #1f232a;
   --color-border-strong: #2a2f37;
-  --color-fg: #e6e8eb;
-  --color-fg-muted: #8a8f98;
-  --color-fg-subtle: #565a64;
+  /* Body / heading text — slightly brighter for crisper rendering on dark bg. */
+  --color-fg: #edeef0;
+  /* Secondary text — bumped from #8a8f98 (~4.4:1) to #b1b6bf (~6.6:1)
+     so muted copy hits WCAG AA Normal and stops feeling washed out. */
+  --color-fg-muted: #b1b6bf;
+  /* Tertiary (labels, meta) — bumped from #565a64 to #7b8089 for legibility. */
+  --color-fg-subtle: #7b8089;
   --color-brand: #c9a8ff;
   --color-brand-fg: #1a0f2e;
   --shiki-theme: "github-dark-dimmed";
@@ -50,11 +54,19 @@
   --color-border: #e6e6e3;
   --color-border-strong: #d4d4d0;
   --color-fg: #18181b;
-  --color-fg-muted: #61656c;
-  --color-fg-subtle: #9094a0;
+  /* Bumped from #61656c (~5.6:1) to #4b4f57 (~8.1:1) for AA-Large + AAA Normal. */
+  --color-fg-muted: #4b4f57;
+  --color-fg-subtle: #6d717a;
   --color-brand: #6f3cf0;
   --color-brand-fg: #ffffff;
   --shiki-theme: "github-light";
+}
+
+html {
+  /* Base type scale — Tailwind text-base = 1rem; bumping root to 16.5px
+     gently lifts every rem-based element (prose, cards, etc.) without
+     breaking the design system. */
+  font-size: 16.5px;
 }
 
 html,
@@ -62,8 +74,11 @@ body {
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11"; /* Inter: stylistic set + alt 6/9 */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  letter-spacing: -0.005em;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -95,11 +110,12 @@ body {
   background: var(--color-bg-elev) !important;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1rem 1.1rem;
+  padding: 1rem 1.15rem;
   overflow-x: auto;
   font-family: var(--font-mono);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 0.875rem; /* ~14.4px — readable but still distinctly mono */
+  line-height: 1.65;
+  margin: 1.1rem 0;
 }
 
 /* Shiki dual-theme: pick the right color per active theme */
@@ -127,39 +143,47 @@ body {
   color: var(--color-fg);
 }
 
+.prose {
+  font-size: 1.0625rem; /* ~17.5px at 16.5px root — comfortable long-form reading */
+  line-height: 1.75;
+  color: var(--color-fg);
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
 .prose h4 {
   scroll-margin-top: 96px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  color: var(--color-fg);
 }
 
-.prose h1 { font-size: 2rem; margin: 0 0 1rem; }
-.prose h2 { font-size: 1.4rem; margin: 2.25rem 0 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
-.prose h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
-.prose h4 { font-size: 0.95rem; margin: 1.25rem 0 0.5rem; color: var(--color-fg-muted); }
-.prose p, .prose li { color: var(--color-fg); line-height: 1.7; }
-.prose p { margin: 0.85rem 0; }
-.prose ul, .prose ol { margin: 0.85rem 0; padding-left: 1.4rem; }
+.prose h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 1.25rem; }
+.prose h2 { font-size: 1.625rem; line-height: 1.25; margin: 2.5rem 0 0.85rem; padding-top: 1.75rem; border-top: 1px solid var(--color-border); }
+.prose h3 { font-size: 1.25rem; line-height: 1.35; margin: 1.75rem 0 0.6rem; }
+.prose h4 { font-size: 1.0625rem; line-height: 1.4; margin: 1.35rem 0 0.5rem; }
+.prose p, .prose li { color: var(--color-fg); line-height: 1.75; }
+.prose p { margin: 0.95rem 0; }
+.prose ul, .prose ol { margin: 0.95rem 0; padding-left: 1.5rem; }
 .prose ul { list-style: disc; }
 .prose ol { list-style: decimal; }
-.prose li { margin: 0.3rem 0; }
+.prose li { margin: 0.4rem 0; }
 .prose a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .prose a:hover { opacity: 0.85; }
 .prose blockquote {
   border-left: 2px solid var(--color-border-strong);
-  padding: 0.25rem 0 0.25rem 1rem;
+  padding: 0.4rem 0 0.4rem 1.1rem;
   color: var(--color-fg-muted);
-  margin: 1rem 0;
+  margin: 1.1rem 0;
+  font-size: 1rem;
 }
-.prose hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+.prose hr { border: none; border-top: 1px solid var(--color-border); margin: 2.25rem 0; }
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.9rem;
+  margin: 1.1rem 0;
+  font-size: 0.95rem;
 }
 .prose th, .prose td {
   border: 1px solid var(--color-border);
