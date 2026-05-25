@@ -15,6 +15,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, rmSync, existsSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { execSync } from "node:child_process";
 import matter from "gray-matter";
 
 const ROOT = process.cwd();
@@ -24,6 +25,36 @@ const SKILLS_OUT_DIR = join(CONTENT_DIR, "skills");
 
 const GITHUB_BASE =
   "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories";
+
+/**
+ * In production the GitHub Action copies categories/ from main into this branch
+ * before building. In local dev (and on a fresh clone) we hydrate it ourselves
+ * from the main branch via `git archive`, so `npm run dev` just works.
+ */
+function hydrateCategoriesFromMain() {
+  if (existsSync(CATEGORIES_DIR) && readdirSync(CATEGORIES_DIR).length > 0) return;
+  // try git archive from main (works in clones that have main fetched)
+  const candidates = ["main", "origin/main", "refs/remotes/origin/main"];
+  for (const ref of candidates) {
+    try {
+      console.log(`→ categories/ missing; hydrating from ${ref} via git archive`);
+      execSync(`git archive ${ref} categories | tar -x -C "${ROOT}"`, {
+        stdio: ["ignore", "ignore", "pipe"],
+        shell: "/bin/bash",
+      });
+      if (existsSync(CATEGORIES_DIR)) {
+        console.log("✓ hydrated categories/ successfully");
+        return;
+      }
+    } catch {
+      // try next ref
+    }
+  }
+  console.warn(
+    "! could not hydrate categories/ from a local main branch. " +
+      "Run `git fetch origin main` and rerun, or copy categories/ manually."
+  );
+}
 
 export interface SkillIndexEntry {
   id: string;
@@ -137,6 +168,7 @@ function clean() {
 }
 
 function build() {
+  hydrateCategoriesFromMain();
   ensureDir(CONTENT_DIR);
   clean();
 
