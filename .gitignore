@@ -1,4 +1,40 @@
+# OS & editor cruft
 .DS_Store
-node_modules/
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Secrets
 .env
+.env.local
+.env.*.local
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Next.js build output (the web platform builds in this tree locally)
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Build-time generated content (sourced from categories/ at build time)
+content/
+
+# Vercel
+.vercel/
+
+# Coverage / tests
+coverage/
+.nyc_output/
+
+# Misc
+Thumbs.db
