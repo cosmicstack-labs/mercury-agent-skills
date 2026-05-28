@@ -13,7 +13,7 @@
 
 **An open-source library of `SKILL.md` playbooks for AI agents.** Browse and install on [skills.mercuryagent.sh](https://skills.mercuryagent.sh), or pull them directly from the [Mercury Agent](https://mercuryagent.sh) CLI.
 
-**126 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
+**127 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
 
 ---
 
@@ -104,7 +104,7 @@ It also exposes a public JSON feed at [`/api/feed.json`](https://skills.mercurya
 | [Testing & QA](./categories/testing-qa/) | 5 | Test strategy, E2E, performance testing, API testing, accessibility testing |
 | [Automation](./categories/automation/) | 4 | Workflows, shell scripting, web scraping, X/Twitter automation |
 | [Media Download](./categories/media-download/) | 4 | yt-dlp wrappers, audio extraction, batch downloading, platform-specific patterns |
-| [PDF Generation](./categories/pdf-generation/) | 4 | Invoices, reports, branded documents, dynamic templating |
+| [PDF Generation](./categories/pdf-generation/) | 5 | Invoices, reports, branded documents, dynamic templating, markdown→PDF typesetting (any2pdf) |
 | [Presentation](./categories/presentation/) | 4 | Slide decks, narrative structure, stage delivery, visual hierarchy |
 | [Marketing](./categories/marketing/) | 3 | SEO, content strategy, distribution |
 | [Business](./categories/business/) | 2 | Negotiation, operations |

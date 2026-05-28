@@ -258,6 +258,12 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Assessment Design | Formative vs summative, rubric design, authentic assessment, competency-based evaluation, and feedback | [SKILL.md](./categories/education-learning/assessment-design/SKILL.md) |
 | Micro-Learning | Content chunking, mobile-first learning, spaced delivery, engagement patterns, and platform best practices | [SKILL.md](./categories/education-learning/micro-learning/SKILL.md) |
 
+## PDF Generation
+
+| Skill | Description | File |
+|-------|-------------|------|
+| any2pdf | Markdown → publication-quality PDF with reportlab; CJK/Latin mixed text, 10 themes, cover pages, watermarks, callouts, formulas — adapted from [lovstudio/any2pdf](https://github.com/lovstudio/any2pdf) (MIT) | [SKILL.md](./categories/pdf-generation/any2pdf/SKILL.md) |
+
 ---
 
 *Total: 130+ skills across 20 categories*
