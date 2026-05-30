@@ -149,6 +149,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 
 | Skill | Description | File |
 |-------|-------------|------|
+| Screenshot | Capture high-fidelity screenshots of any website using Playwright — viewport presets, dark/light mode, element/text selectors, split-screen, batch capture, and Telegram delivery | [SKILL.md](./categories/automation/screenshot/SKILL.md) |
 | Workflow Automation | Workflow design, n8n patterns, triggers | [SKILL.md](./categories/automation/workflow-automation/SKILL.md) |
 | Shell Scripting | Scripting best practices, error handling | [SKILL.md](./categories/automation/shell-scripting/SKILL.md) |
 | Web Scraping | Playwright/Puppeteer patterns, anti-detection, pagination, data extraction, and rate limiting | [SKILL.md](./categories/automation/web-scraping/SKILL.md) |
