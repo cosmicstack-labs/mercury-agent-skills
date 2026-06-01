@@ -13,7 +13,7 @@
 
 **An open-source library of `SKILL.md` playbooks for AI agents.** Browse and install on [skills.mercuryagent.sh](https://skills.mercuryagent.sh), or pull them directly from the [Mercury Agent](https://mercuryagent.sh) CLI.
 
-**128 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
+**129 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
 
 ---
 
@@ -92,7 +92,7 @@ It also exposes a public JSON feed at [`/api/feed.json`](https://skills.mercurya
 | [Development](./categories/development/) | 16 | Clean code, code review, debugging, testing, ADRs, documentation, refactoring, dependency hygiene |
 | [AI & ML](./categories/ai-ml/) | 11 | Prompt engineering, agent health, memory, delegation, handoffs, token budgets, error recovery, audit logging |
 | [Backend](./categories/backend/) | 9 | APIs, Node.js, Python, database design, auth, serverless, microservices, caching, message queues |
-| [Shop & Restaurant](./categories/shop-restaurant/) | 9 | Inventory, menu engineering, scheduling, reviews, daily pulse, table management, pricing, social, Zomato ordering |
+| [Shop & Restaurant](./categories/shop-restaurant/) | 10 | Inventory, menu engineering, scheduling, reviews, daily pulse, table management, pricing, social, Zomato ordering, Amazon assistant (search/cart/orders/insights) |
 | [Frontend](./categories/frontend/) | 8 | React, Next.js, Tailwind, state management, testing, performance, responsive design, component systems |
 | [Creative & Personal Development](./categories/creative-personal-development/) | 8 | Storytelling, decision frameworks, standups, notes, repurposing, branding, validation, time blocking |
 | [DevOps](./categories/devops/) | 7 | Docker, CI/CD, Kubernetes, Terraform, monitoring, SRE, GitOps |

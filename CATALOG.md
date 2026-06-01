@@ -205,6 +205,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Price Scout | Supplier price comparison, substitution analysis, and negotiation briefs | [SKILL.md](./categories/shop-restaurant/price-scout/SKILL.md) |
 | Social Post | Social media content generation, calendar planning, and engagement tracking | [SKILL.md](./categories/shop-restaurant/social-post/SKILL.md) |
 | Zomato Order | Browser-automated Zomato ordering with cookie-based session reuse and payment link sharing | [SKILL.md](./categories/shop-restaurant/zomato-order/SKILL.md) |
+| Amazon Assistant | Headless Amazon (in/com/uk/de/jp/…) — search, compare, sort, cart, orders, deals, spending insights; checkout is prepare-and-handoff | [SKILL.md](./categories/shop-restaurant/amazon-assistant/SKILL.md) |
 
 ## Creative & Personal Development
 
