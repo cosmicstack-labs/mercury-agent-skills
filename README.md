@@ -13,7 +13,7 @@
 
 **An open-source library of `SKILL.md` playbooks for AI agents.** Browse and install on [skills.mercuryagent.sh](https://skills.mercuryagent.sh), or pull them directly from the [Mercury Agent](https://mercuryagent.sh) CLI.
 
-**129 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
+**130 skills across 23 categories** — hand-curated, production-ready, and compatible with every major agent: Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
 
 ---
 
@@ -102,7 +102,7 @@ It also exposes a public JSON feed at [`/api/feed.json`](https://skills.mercurya
 | [Health & Wellness](./categories/health-wellness/) | 5 | Fitness, nutrition, mental health, sleep, habits |
 | [Mobile](./categories/mobile/) | 5 | iOS, Android, React Native, performance, App Store optimization |
 | [Testing & QA](./categories/testing-qa/) | 5 | Test strategy, E2E, performance testing, API testing, accessibility testing |
-| [Automation](./categories/automation/) | 10 | Screenshots, workflows, shell scripting, web scraping, X/Twitter automation, test automation, data sync, deployment automation, RPA, daily briefing |
+| [Automation](./categories/automation/) | 11 | Screenshots, workflows, shell scripting, web scraping, X/Twitter automation, twitter-account-manager (research), test automation, data sync, deployment automation, RPA, daily briefing |
 | [Media Download](./categories/media-download/) | 4 | yt-dlp wrappers, audio extraction, batch downloading, platform-specific patterns |
 | [PDF Generation](./categories/pdf-generation/) | 5 | Invoices, reports, branded documents, dynamic templating, markdown→PDF typesetting (any2pdf) |
 | [Presentation](./categories/presentation/) | 4 | Slide decks, narrative structure, stage delivery, visual hierarchy |

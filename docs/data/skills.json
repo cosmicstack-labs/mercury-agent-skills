@@ -150,6 +150,16 @@
     "github_url": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/screenshot"
   },
   {
+    "name": "twitter-account-manager",
+    "category": "Automation",
+    "description": "'EDUCATIONAL / RESEARCH ONLY — Single-account always-on Twitter/X manager driven by cookies + headless Playwright. Runs a 10-minute scheduler that drafts posts, engages with timeline/search results, and queues anything risky for Telegram human approval. Hard daily ceilings, structural prompt-injection defenses, and DM auto-reply permanently disabled. Accounts WILL be terminated — we do not encourage use.'",
+    "tags": [],
+    "icon": "🔧",
+    "body": "# Twitter Account Manager 🧪\n\n> ## ⛔ EDUCATIONAL / RESEARCH USE ONLY\n>\n> **Twitter/X's [Developer Agreement](https://developer.x.com/en/developer-terms/agreement) and [Terms of Service](https://x.com/en/tos) prohibit automated account access outside of the official API.** This skill drives a real browser session with the user's own cookies. Twitter's automation-detection stack is aggressive and continuously updated.\n>\n> **Accounts running this WILL be rate-limited, shadow-banned, suspended, or permanently terminated.** That is not a maybe — it is the expected outcome. The only question is how quickly.\n>\n> **We do not encourage use of this skill.** It exists as a reference implementation for research into:\n> - browser-automation detection surfaces\n> - prompt-injection defenses on hostile, attacker-controlled inputs (replies, DMs, quote-tweets, bios, search results)\n> - human-in-the-loop approval patterns for autonomous agents\n> - rate-limit / safety-rail design for always-on agents\n>\n> If you run this against a real account, that is your decision and your loss. Use a throwaway account on a throwaway number. Do not run this for commercial purposes, spam, harassment, astroturfing, or any activity that would violate platform rules or local law.\n\n---\n\n## Overview\n\nA **single-account, single-process** Twitter/X manager. One Python daemon → one Twitter account → one cookie jar → one SQLite store. If you want multiple accounts, run multiple isolated copies under different config directories — multi-account orbit is intentionally out of scope.\n\nThe daemon wakes on a configurable heartbeat (default 10 minutes, **minimum 5 minutes — enforced at startup**), runs a small set of read-only sensing tasks, drafts candidate actions, runs them through safety rails + fact-check + prompt-injection defenses, and either executes the safe ones directly or queues the rest to Telegram for human approval.\n\n### Distinct from `automation/x-twitter-automation`\n\nThat skill (`Xquik-dev`) is API-bas",
+    "slug": "automation/twitter-account-manager",
+    "github_url": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/twitter-account-manager"
+  },
+  {
     "name": "x-twitter-automation",
     "category": "Automation",
     "description": "'Design safe X/Twitter automation workflows for tweet search, reply reads, monitoring, posting, and agent-operated social media actions'",
