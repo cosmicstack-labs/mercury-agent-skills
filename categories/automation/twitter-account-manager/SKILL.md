@@ -47,6 +47,12 @@ The daemon wakes on a configurable heartbeat (default 10 minutes, **minimum 5 mi
 
 That skill (`Xquik-dev`) is API-based via Hermes Tweet. This skill is **browser-based**, **always-on**, **single-account**, and **never touches the official API**.
 
+### Approval channel — Mercury vs everything else
+
+On **Mercury**, the human-in-the-loop approval flow uses Mercury's **built-in** Telegram (and CLI / web) channels. You do **not** configure a bot token or chat id — if you've activated Telegram in Mercury, this skill uses it; if you haven't, the skill will offer to fall back to CLI prompts or ask you to enable Telegram.
+
+On **other agents** (Claude Code, Codex CLI, Hermes, etc.) without a built-in chat channel, you provide your own Telegram bot in config. See **[Approval Channel Resolution](#approval-channel-resolution)** below.
+
 ---
 
 ## Architecture
@@ -111,10 +117,28 @@ limits:
   replies_per_day: 30
   retweets_per_day: 20
 
-# Telegram approval channel (REQUIRED).
-telegram:
-  bot_token_env: TWITTER_TAM_TG_BOT_TOKEN
-  approver_chat_id: 123456789      # YOUR chat id; only this user can approve
+# Approval channel.
+#
+# On Mercury: leave this block empty / omit it. The skill auto-detects
+#   Mercury's built-in Telegram layer (`agent.has_channel("telegram")`)
+#   and routes approvals through `agent.send_message()` + reply polling.
+#   No bot token, no chat id, no extra plumbing.
+#
+# On other agents (Claude Code, Codex CLI, Hermes, etc.) that do not
+#   expose a built-in Telegram channel: provide your own bot below.
+#   Fields are ONLY read when Mercury's channel is unavailable.
+#
+# On any agent: if neither Mercury nor a configured bot is available,
+#   approvals fall back to STDIN prompts (interactive use only) and the
+#   daemon refuses to start in `start` mode without an approval channel.
+approval:
+  # Optional override — set to "mercury" | "telegram_bot" | "stdin" to
+  # force a specific channel. Default: "auto" (Mercury → bot → stdin).
+  channel: auto
+  # Only used when channel resolves to "telegram_bot":
+  telegram_bot:
+    bot_token_env: TWITTER_TAM_TG_BOT_TOKEN
+    approver_chat_id: 123456789
 
 # LLM endpoints.
 llm:
@@ -428,26 +452,123 @@ Dedup: every action checks `seen` before queuing. Every executed action incremen
 
 ---
 
-## Telegram Approval Loop
+## Approval Channel Resolution
 
-```python
-# Approval message schema
-{
-    "action_id": 1234,
-    "kind": "reply",
-    "target": "1234567890",
-    "context": "<wrapped external content>",
-    "draft": "thanks, will look into it",
-    "flags": ["fact_check: unverifiable date"],
-    "expires_at": <ts + 30min>,
-}
+Approvals (fact-check flags, post drafts, edited replies) need a human in the loop. **On Mercury, that loop is already wired** — Mercury exposes Telegram (and CLI / web) as built-in output channels via `agent.send_message()`, `agent.send_file()`, and `agent.await_reply()`. This skill detects and uses them. **You do not configure a Telegram bot for Mercury.**
+
+For non-Mercury agents (Claude Code, Codex CLI, Hermes, etc.) that lack a built-in chat channel, the skill falls back to a user-provided Telegram bot, then to STDIN.
+
+### Resolution order
+
+```
+config.approval.channel = auto   (default)
+   │
+   ├─ 1. Is the host agent Mercury?
+   │     (probe `agent.has_channel("telegram")` or import mercury_agent)
+   │     YES → use Mercury's built-in Telegram layer.
+   │            NO config needed. NO token. NO chat id.
+   │            Approvals routed via agent.send_message(channel="telegram")
+   │            + agent.await_reply(timeout=1800).
+   │
+   ├─ 2. Is `approval.telegram_bot.bot_token_env` set AND the env var
+   │     resolves to a non-empty token AND `approver_chat_id` is set?
+   │     YES → use the standalone python-telegram-bot transport.
+   │
+   └─ 3. STDIN fallback.
+         Only allowed for one-shot commands (`post`, `engage`, `health`).
+         The `start` daemon REFUSES to launch without channel 1 or 2 —
+         interactive approval is not viable for an always-on process.
 ```
 
-User replies with inline buttons: `✅ Approve`, `❌ Discard`, `✏️ Edit` (Edit opens a force-reply prompt; the edited text re-enters the defense pipeline from Layer 2 onward).
+`config.approval.channel` may be set to `mercury`, `telegram_bot`, or `stdin` to force a specific resolution (useful for testing).
 
-If no response within 30 minutes → auto-discard. The bot never executes a queued action unilaterally after timeout.
+### Approval interface (transport-agnostic)
 
-Only `telegram.approver_chat_id` can approve. All other Telegram messages are ignored.
+```python
+# skill/approval.py
+from abc import ABC, abstractmethod
+
+class Approver(ABC):
+    @abstractmethod
+    async def request(self, action: dict) -> str:
+        """Return 'approve' | 'reject' | f'edit:{new_text}' | 'timeout'."""
+
+class MercuryApprover(Approver):
+    """Uses the host agent's built-in Telegram channel — no bot config."""
+    def __init__(self, agent):
+        self.agent = agent  # injected Mercury runtime handle
+
+    async def request(self, action: dict) -> str:
+        msg = render_approval_card(action)         # markdown text
+        await self.agent.send_message(
+            text=msg,
+            channel="telegram",                    # Mercury routes it
+            buttons=[("✅ Approve", "approve"),
+                     ("❌ Discard", "reject"),
+                     ("✏️ Edit",    "edit")],
+        )
+        reply = await self.agent.await_reply(timeout=1800)  # 30 min
+        if reply is None:
+            return "timeout"
+        if reply.button == "edit":
+            edited = await self.agent.await_reply(timeout=1800)
+            return f"edit:{edited.text}" if edited else "timeout"
+        return reply.button or "reject"
+
+class TelegramBotApprover(Approver):
+    """Standalone python-telegram-bot for non-Mercury agents."""
+    def __init__(self, token: str, chat_id: int): ...
+    async def request(self, action: dict) -> str: ...
+
+class StdinApprover(Approver):
+    """Interactive only — refused by `start` daemon."""
+    async def request(self, action: dict) -> str:
+        print(render_approval_card(action))
+        choice = input("approve/reject/edit: ").strip().lower()
+        if choice == "edit":
+            return f"edit:{input('new text: ')}"
+        return choice if choice in {"approve", "reject"} else "reject"
+
+def resolve_approver(cfg: dict, agent=None, command: str = "start") -> Approver:
+    forced = cfg.get("approval", {}).get("channel", "auto")
+
+    # 1. Mercury (auto or forced)
+    if forced in ("auto", "mercury"):
+        if agent is not None and getattr(agent, "has_channel", lambda _: False)("telegram"):
+            return MercuryApprover(agent)
+        if forced == "mercury":
+            raise SystemExit("approval.channel=mercury but host agent has no telegram channel")
+
+    # 2. Standalone bot
+    bot_cfg = cfg.get("approval", {}).get("telegram_bot", {})
+    token_env = bot_cfg.get("bot_token_env")
+    chat_id = bot_cfg.get("approver_chat_id")
+    token = os.environ.get(token_env) if token_env else None
+    if forced in ("auto", "telegram_bot") and token and chat_id:
+        return TelegramBotApprover(token, chat_id)
+    if forced == "telegram_bot":
+        raise SystemExit(
+            "approval.channel=telegram_bot but bot_token_env is empty or "
+            "approver_chat_id is missing"
+        )
+
+    # 3. STDIN — disallowed for daemon
+    if command == "start":
+        raise SystemExit(
+            "No approval channel available. The `start` daemon requires "
+            "either Mercury's built-in Telegram (run under Mercury) or a "
+            "configured approval.telegram_bot. STDIN fallback is not "
+            "viable for an always-on process."
+        )
+    return StdinApprover()
+```
+
+### Mercury-specific notes
+
+- Mercury exposes the host user's already-paired Telegram chat. The skill never sees the bot token or chat id — those live in Mercury's config.
+- If the Mercury user has **not** activated Telegram, `agent.has_channel("telegram")` returns `False` and the resolver falls through. The skill will then ask the user (via Mercury's CLI/web channel) whether to (a) enable Telegram in Mercury, (b) provide a standalone bot, or (c) run one-shot commands only.
+- Approval cards (`render_approval_card`) emit Markdown that renders cleanly in all of Mercury's channels — same payload, different transport.
+- File delivery (e.g. screenshots of drafts) uses `agent.send_file()` — same as the `screenshot` skill.
 
 ---
 
@@ -477,8 +598,10 @@ Only `telegram.approver_chat_id` can approve. All other Telegram messages are ig
   <string>/tmp/twitter-tam.err.log</string>
   <key>EnvironmentVariables</key>
   <dict>
+    <!-- Only needed for non-Mercury hosts using a standalone bot.
+         Under Mercury, omit this block entirely. -->
     <key>TWITTER_TAM_TG_BOT_TOKEN</key>
-    <string>REPLACE_ME</string>
+    <string>REPLACE_ME_OR_DELETE</string>
   </dict>
 </dict>
 </plist>
@@ -503,7 +626,9 @@ Type=simple
 ExecStart=%h/.local/bin/twitter-tam start
 Restart=on-failure
 RestartSec=30s
-Environment=TWITTER_TAM_TG_BOT_TOKEN=REPLACE_ME
+# Only set if running outside Mercury with a standalone bot.
+# Under Mercury, omit this Environment line.
+Environment=TWITTER_TAM_TG_BOT_TOKEN=REPLACE_ME_OR_DELETE
 
 [Install]
 WantedBy=default.target
@@ -630,13 +755,13 @@ async def llm_l1_intent_check(persona: str, draft: str) -> dict:
     raise NotImplementedError
 
 # --- Telegram approval -------------------------------------------
-class TelegramApprover:
-    def __init__(self, token: str, chat_id: int):
-        self.token = token
-        self.chat_id = chat_id
-    async def request(self, action: dict) -> str:
-        """Send approval prompt, await response, return 'approve'|'reject'|'edit:<text>'|'timeout'."""
-        raise NotImplementedError
+# See "Approval Channel Resolution" section above. On Mercury, the
+# MercuryApprover uses agent.send_message / agent.await_reply against
+# the user's already-paired Telegram chat — no bot token required.
+# On non-Mercury hosts, TelegramBotApprover is used with a configured
+# token + chat id. Resolution is performed by resolve_approver(...).
+class Approver:
+    async def request(self, action: dict) -> str: ...  # see full impl above
 
 # --- Playwright session ------------------------------------------
 class Session:
@@ -681,7 +806,7 @@ async def execute_post(session: Session, text: str):
     counter_inc("posts")
 
 # --- Main tick ---------------------------------------------------
-async def tick(cfg: dict, approver: TelegramApprover, headed: bool):
+async def tick(cfg: dict, approver: "Approver | None", headed: bool):
     logging.info("tick start")
     persona = PERSONA.read_text() if PERSONA.exists() else ""
     async with Session(headed=headed) as s:
@@ -735,8 +860,9 @@ def main():
         asyncio.run(do_login())
     elif cmd == "start":
         PID.write_text(str(os.getpid()))
-        token = os.environ[cfg["telegram"]["bot_token_env"]]
-        approver = TelegramApprover(token, cfg["telegram"]["approver_chat_id"])
+        # Mercury injects `agent` into the runtime; non-Mercury hosts pass None.
+        agent = globals().get("mercury_agent")  # set by Mercury runtime
+        approver = resolve_approver(cfg, agent=agent, command="start")
         sched = AsyncIOScheduler()
         sched.add_job(lambda: asyncio.create_task(tick(cfg, approver, headed)),
                       "interval", seconds=interval)
