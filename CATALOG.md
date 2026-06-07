@@ -272,6 +272,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Skill | Description | File |
 |-------|-------------|------|
 | GitHub Repo Promo | 1080x1920 Instagram Reels video promos for GitHub repos using HyperFrames — fullscreen scrolling phone mockup, narration-aware GSAP beat sync, dark GitHub theme, ElevenLabs AI voiceover, stats and follow CTA | [SKILL.md](./categories/media-download/github-repo-promo/SKILL.md) |
+| GitHub Repo Tour | 15-30 second scrolling video tour of GitHub repos with ElevenLabs narration and word-by-word subtitle sync — full-screen mobile viewport, GSAP scroll, Karaoke-style captions, dark theme, HyperFrames CLI | [SKILL.md](./categories/media-download/github-repo-tour/SKILL.md) |
 | Video Downloader | yt-dlp wrappers, format selection, playlist handling, and post-processing | [SKILL.md](./categories/media-download/video-downloader/SKILL.md) |
 | Audio Extraction | Extract audio from video, batch processing, and format conversion | [SKILL.md](./categories/media-download/audio-extraction/SKILL.md) |
 | Playlist Archiver | Batch download playlists, metadata preservation, and organization | [SKILL.md](./categories/media-download/playlist-archiver/SKILL.md) |
@@ -279,6 +280,6 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 
 ---
 
-*Total: 131 skills across 23 categories*
+*Total: 132 skills across 23 categories*
 
 Want to add a skill? See [CONTRIBUTING.md](./CONTRIBUTING.md).

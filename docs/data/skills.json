@@ -970,6 +970,16 @@
     "github_url": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/github-repo-promo"
   },
   {
+    "name": "github-repo-tour",
+    "category": "Media Download",
+    "description": "'Generate a 15-30 second scrolling video tour of any GitHub repository page with ElevenLabs AI narration and word-by-word subtitle sync. Captures a full-page mobile-viewport screenshot, scrolls top-to-bottom with GSAP, and burns synced subtitles onto the final MP4 using HyperFrames CLI.'",
+    "tags": [],
+    "icon": "🔧",
+    "body": "# GitHub Repo Tour — Scrolling Video with Synced Narration & Subtitles\n\n> **Depends on:** [website-to-hyperframes](https://github.com/heygen-com/hyperframes/blob/main/skills/website-to-hyperframes/SKILL.md) — load it before starting. Its 6-step workflow and reference files apply here. This skill specializes that workflow for single-page scrolling tours with narration and visible subtitles.\n\n---\n\n## What This Skill Produces\n\nA **1080x1920 portrait video** (Instagram Reels format) that:\n\n1. **Shows a GitHub repository page** — full-page mobile screenshot, scrolling smoothly from top to bottom over 15–30 seconds.\n2. **Narrates the tour** — ElevenLabs AI voice describing what's on screen, synced to the scroll position.\n3. **Burns subtitles on screen** — word-by-word caption overlay that highlights each word as the narrator speaks it. The viewer reads along while listening.\n4. **Ends with a CTA** — \"Star on GitHub\" or \"Follow for more\" call to action.\n\n## Core Decisions\n\n| Decision | Value | Why |\n|----------|-------|-----|\n| **Dimensions** | **1080x1920** | Instagram Reels primary format |\n| **Duration** | **15–30 seconds** | Sweet spot for Shorts/Reels engagement |\n| **Narration** | **Drives timing** | Scroll speed, beat durations, and subtitle timing all derive from the audio |\n| **Subtitles** | **Word-by-word highlight** | Each word lights up as the narrator says it — Karaoke-style captions |\n| **Phone viewport** | **Full-screen scroll, no bezel** | The GitHub page fills the entire 1080x1920 canvas |\n| **Output folder** | `github-promos/<repo>-tour/` | Sibling to github-repo-promo projects |\n\n---\n\n## Directory Structure\n\n```\ngithub-promos/\n  <repo>-tour/\n    index.html              ← main HyperFrames composition\n    package.json            ← from hyperframes init\n    hyperframes.config.json ← HyperFrames config\n    SCRIPT.md               ← narration script with timestamps\n    assets/\n      repo-page.png         ← Full-page GitHub screenshot (dark mode, mobile viewpo",
+    "slug": "media-download/github-repo-tour",
+    "github_url": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/github-repo-tour"
+  },
+  {
     "name": "legal-downloading",
     "category": "Media Download",
     "description": "'Legal Downloading: Copyright-aware downloading, content that allows offline access, podcast tools, and compliance best practices'",
