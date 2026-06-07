@@ -153,7 +153,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Workflow Automation | Workflow design, n8n patterns, triggers | [SKILL.md](./categories/automation/workflow-automation/SKILL.md) |
 | Shell Scripting | Scripting best practices, error handling | [SKILL.md](./categories/automation/shell-scripting/SKILL.md) |
 | Web Scraping | Playwright/Puppeteer patterns, anti-detection, pagination, data extraction, and rate limiting | [SKILL.md](./categories/automation/web-scraping/SKILL.md) |
-| X/Twitter Automation | Safe tweet search, reply reads, monitoring, and action-gated posting workflows with Hermes Tweet | [SKILL.md](./categories/automation/x-twitter-automation/SKILL.md) |
+| X/Twitter Automation | Safe tweet search, reply reads, monitoring, and action-gated posting workflows with TweetClaw for OpenClaw and Hermes Tweet for Hermes Agent | [SKILL.md](./categories/automation/x-twitter-automation/SKILL.md) |
 | Twitter Account Manager | EDUCATIONAL/RESEARCH ONLY — single-account always-on browser-based X manager (cookies + headless Playwright); Telegram approval, hard daily ceilings, prompt-injection defenses, DM auto-reply disabled | [SKILL.md](./categories/automation/twitter-account-manager/SKILL.md) |
 | Test Automation | Framework selection, page object model, data-driven testing, parallel execution, and CI integration | [SKILL.md](./categories/automation/test-automation/SKILL.md) |
 | Data Sync | ETL patterns, change data capture, API sync, file-based sync, and conflict resolution | [SKILL.md](./categories/automation/data-sync/SKILL.md) |
