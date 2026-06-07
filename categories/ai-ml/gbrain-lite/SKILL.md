@@ -2,7 +2,7 @@
 name: gbrain-lite
 description: 'Lightweight personal knowledge base — markdown + YAML frontmatter structured notes with full-text search and cross-referencing for AI agents'
 metadata:
-  author: Mayx07
+  author: myuxin007
   version: 1.0.0
   category: ai-ml
   tags:

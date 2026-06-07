@@ -2,7 +2,7 @@
 name: daily-briefing
 description: 'Automated daily tech briefing — multi-source collection → knowledge-base deduplication → AI summarization → TTS speech synthesis, generating MP3 audio briefings'
 metadata:
-  author: Mayx07
+  author: myuxin007
   version: 1.0.0
   category: automation
   tags:
