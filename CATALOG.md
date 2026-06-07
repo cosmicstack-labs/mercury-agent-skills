@@ -267,8 +267,18 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 |-------|-------------|------|
 | any2pdf | Markdown → publication-quality PDF with reportlab; CJK/Latin mixed text, 10 themes, cover pages, watermarks, callouts, formulas — adapted from [lovstudio/any2pdf](https://github.com/lovstudio/any2pdf) (MIT) | [SKILL.md](./categories/pdf-generation/any2pdf/SKILL.md) |
 
+## Media Download
+
+| Skill | Description | File |
+|-------|-------------|------|
+| GitHub Repo Promo | 1080x1920 Instagram Reels video promos for GitHub repos using HyperFrames — fullscreen scrolling phone mockup, narration-aware GSAP beat sync, dark GitHub theme, ElevenLabs AI voiceover, stats and follow CTA | [SKILL.md](./categories/media-download/github-repo-promo/SKILL.md) |
+| Video Downloader | yt-dlp wrappers, format selection, playlist handling, and post-processing | [SKILL.md](./categories/media-download/video-downloader/SKILL.md) |
+| Audio Extraction | Extract audio from video, batch processing, and format conversion | [SKILL.md](./categories/media-download/audio-extraction/SKILL.md) |
+| Playlist Archiver | Batch download playlists, metadata preservation, and organization | [SKILL.md](./categories/media-download/playlist-archiver/SKILL.md) |
+| Legal Downloading | Copyright awareness, fair use, and legal downloading practices | [SKILL.md](./categories/media-download/legal-downloading/SKILL.md) |
+
 ---
 
-*Total: 130+ skills across 20 categories*
+*Total: 131 skills across 23 categories*
 
 Want to add a skill? See [CONTRIBUTING.md](./CONTRIBUTING.md).
