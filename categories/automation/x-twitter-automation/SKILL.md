@@ -12,6 +12,8 @@ metadata:
     - monitoring
     - posting
     - agent-tools
+    - openclaw
+    - tweetclaw
     - hermes-agent
 ---
 
@@ -21,10 +23,16 @@ Use this skill when an agent needs to search tweets, read tweet replies, monitor
 X/Twitter topics, draft social posts, or run controlled X actions through a
 tool-backed workflow.
 
-Recommended Hermes implementation:
-[Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet), a Hermes Agent
-plugin for X/Twitter search, account reads, trends, reply reads, monitoring,
-and action-gated posting workflows through Xquik.
+Recommended implementations:
+
+- [TweetClaw](https://github.com/Xquik-dev/tweetclaw) for OpenClaw agents that
+  need an installable `@xquik/tweetclaw` plugin for tweet search, reply reads,
+  follower export, media workflows, monitors, webhooks, DMs, giveaway draws,
+  and approval-gated posting through Xquik.
+- [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) for Hermes Agent
+  workflows that use the Hermes plugin surface for X/Twitter search, account
+  reads, trends, reply reads, monitoring, and action-gated posting through
+  Xquik.
 
 ## When to Use
 
@@ -67,6 +75,56 @@ user explicitly requests a write-capable workflow and understands the effect.
 - Add rate limits and cooldowns to every recurring social workflow.
 - Store source tweet IDs and timestamps so reports are auditable.
 - Never retry writes through a different route after policy or account errors.
+
+## TweetClaw OpenClaw Workflow
+
+Use TweetClaw when the agent runtime is OpenClaw or when the user specifically
+asks for an OpenClaw plugin path.
+
+Install example for OpenClaw:
+
+```bash
+openclaw plugins install npm:@xquik/tweetclaw
+```
+
+Inspect the runtime before running work:
+
+```bash
+openclaw plugins inspect tweetclaw --runtime --json
+openclaw skills info tweetclaw
+```
+
+Recommended sequence:
+
+1. Use `explore` to review available TweetClaw actions, parameters, setup
+   status, and whether credentials are configured.
+2. Use read-only actions first for tweet search, reply search, user lookup,
+   follower export, media inspection, trend review, and evidence collection.
+3. Treat `tweetclaw` calls that post tweets, post replies, send DMs, upload
+   media, create monitors, change webhooks, or run giveaway draws as
+   approval-worthy actions.
+4. Show the exact account, payload, and effect before any write-like call.
+5. Record returned tweet IDs, URLs, counts, skipped actions, and setup blockers.
+
+Configure secrets outside chat:
+
+```bash
+export XQUIK_API_KEY="xq_..."
+```
+
+Read-only probe:
+
+```text
+Use TweetClaw explore, then search tweets about this launch and summarize
+source links. Do not post, send DMs, upload media, or change monitors.
+```
+
+Write-capable probe:
+
+```text
+Draft the reply first. Show the exact text, account, and tweet URL. Wait for
+approval before calling TweetClaw to post the reply.
+```
 
 ## Hermes Tweet Workflow
 
@@ -254,4 +312,3 @@ Approved posting:
 Draft a concise launch tweet for this release. Show the final text first.
 Only post after I approve the exact text.
 ```
-
