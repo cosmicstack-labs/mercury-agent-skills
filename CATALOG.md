@@ -102,6 +102,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 |-------|-------------|------|
 | Product Strategy | Frameworks, opportunity sizing, roadmaps | [SKILL.md](./categories/product/product-strategy/SKILL.md) |
 | User Research | Research methods, interviews, synthesis | [SKILL.md](./categories/product/user-research/SKILL.md) |
+| Before You Build | Pre-build product risk scoring, validation steps, and build/no-build decisions | [SKILL.md](./categories/product/before-you-build/SKILL.md) |
 | Product Discovery | Problem validation, customer interviews, opportunity solution trees, and assumption mapping | [SKILL.md](./categories/product/product-discovery/SKILL.md) |
 | Experimentation & A/B Testing | Hypothesis formulation, statistical significance, sample size, multivariate testing, and analysis | [SKILL.md](./categories/product/experimentation-ab-testing/SKILL.md) |
 | Product Metrics | North Star metrics, AARRR, leading vs lagging indicators, cohort analysis, and metric trees | [SKILL.md](./categories/product/product-metrics/SKILL.md) |
