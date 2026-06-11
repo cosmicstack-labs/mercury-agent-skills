@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [code-review, pull-requests, collaboration, quality-assurance, automation]
+license: MIT
+metadata:
+  hermes:
+    tags: [code-review]
 ---
 
 # Code Review

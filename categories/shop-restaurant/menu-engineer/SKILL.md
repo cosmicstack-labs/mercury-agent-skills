@@ -15,6 +15,10 @@ metadata:
     - restaurant-margins
     - upselling
     - food-cost
+license: MIT
+metadata:
+  hermes:
+    tags: [menu-engineer]
 ---
 
 # Menu Engineer

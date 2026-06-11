@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: mobile
   tags: [ios, swift, swiftui, uikit, mobile, apple]
+license: MIT
+metadata:
+  hermes:
+    tags: [ios-swift-patterns]
 ---
 
 # iOS Swift Patterns

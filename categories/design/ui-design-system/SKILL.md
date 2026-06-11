@@ -16,6 +16,10 @@ metadata:
     - theming
     - frontend-architecture
     - design-governance
+license: MIT
+metadata:
+  hermes:
+    tags: [ui-design-system]
 ---
 
 # UI Design System Skill

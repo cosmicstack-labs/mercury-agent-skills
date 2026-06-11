@@ -13,6 +13,10 @@ metadata:
     - deployment
     - automation
     - pipelines
+license: MIT
+metadata:
+  hermes:
+    tags: [ci-cd-pipeline]
 ---
 
 # CI/CD Pipeline Design: From Commit to Production

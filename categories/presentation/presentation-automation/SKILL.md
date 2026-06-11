@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: presentation
   tags: [presentation-automation, python-pptx, google-slides-api, slide-generation, automation]
+license: MIT
+metadata:
+  hermes:
+    tags: [presentation-automation]
 ---
 
 # Presentation Automation

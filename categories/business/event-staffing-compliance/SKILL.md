@@ -16,6 +16,10 @@ metadata:
     - employment-law
     - wage-hour
     - coi
+license: MIT
+metadata:
+  hermes:
+    tags: [event-staffing-compliance]
 ---
 
 # Event Staffing Compliance Assessment

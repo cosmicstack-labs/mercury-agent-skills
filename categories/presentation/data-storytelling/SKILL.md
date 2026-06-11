@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: presentation
   tags: [data-storytelling, data-viz, charts, presentations, analytics]
+license: MIT
+metadata:
+  hermes:
+    tags: [data-storytelling]
 ---
 
 # Data Storytelling for Slides

@@ -15,6 +15,10 @@ metadata:
     - waitlist
     - restaurant-operations
     - capacity-optimization
+license: MIT
+metadata:
+  hermes:
+    tags: [table-manager]
 ---
 
 # Table Manager

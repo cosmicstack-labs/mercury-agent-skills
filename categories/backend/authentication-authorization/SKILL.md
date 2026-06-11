@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [authentication, authorization, security, jwt, oauth, rbac]
+license: MIT
+metadata:
+  hermes:
+    tags: [authentication-authorization]
 ---
 
 # Authentication & Authorization

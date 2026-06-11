@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [testing, frontend, vitest, playwright, testing-library, e2e, accessibility]
+license: MIT
+metadata:
+  hermes:
+    tags: [frontend-testing]
 ---
 
 # Frontend Testing

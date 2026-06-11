@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: testing-qa
   tags: [performance, testing, load-testing, k6, locust]
+license: MIT
+metadata:
+  hermes:
+    tags: [performance-testing]
 ---
 
 # Performance Testing

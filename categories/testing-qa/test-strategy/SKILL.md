@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: testing-qa
   tags: [testing, strategy, qa, quality, automation]
+license: MIT
+metadata:
+  hermes:
+    tags: [test-strategy]
 ---
 
 # Test Strategy

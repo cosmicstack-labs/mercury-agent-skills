@@ -16,6 +16,10 @@ metadata:
     - persuasion
     - conflict-resolution
     - salary
+license: MIT
+metadata:
+  hermes:
+    tags: [negotiation]
 ---
 
 # Negotiation Skill

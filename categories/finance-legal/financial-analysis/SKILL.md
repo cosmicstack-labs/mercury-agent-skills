@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: finance-legal
   tags: [finance, analysis, ratios, cash-flow, forecasting]
+license: MIT
+metadata:
+  hermes:
+    tags: [financial-analysis]
 ---
 
 # Financial Analysis

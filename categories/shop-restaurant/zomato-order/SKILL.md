@@ -16,6 +16,10 @@ metadata:
     - playwright
     - cookies
     - delivery
+license: MIT
+metadata:
+  hermes:
+    tags: [zomato-order]
 ---
 
 # Zomato Order Skill 🛵

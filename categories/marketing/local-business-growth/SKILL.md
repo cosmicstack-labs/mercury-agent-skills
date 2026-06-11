@@ -18,6 +18,10 @@ metadata:
     - local-seo
     - small-business
     - shop-restaurant
+license: MIT
+metadata:
+  hermes:
+    tags: [local-business-growth]
 ---
 
 # Local Business Growth Skills

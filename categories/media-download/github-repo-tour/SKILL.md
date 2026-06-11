@@ -16,6 +16,10 @@ metadata:
     - voiceover
     - instagram-reels
     - tts
+license: MIT
+metadata:
+  hermes:
+    tags: [github-repo-tour]
 ---
 
 # GitHub Repo Tour — Scrolling Video with Synced Narration & Subtitles

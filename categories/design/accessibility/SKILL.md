@@ -16,6 +16,10 @@ metadata:
     - color-contrast
     - assistive-technology
     - accessibility-testing
+license: MIT
+metadata:
+  hermes:
+    tags: [accessibility]
 ---
 
 # Accessibility Skill

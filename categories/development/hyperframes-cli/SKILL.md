@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [hyperframes, cli, video-rendering, devops, preview, lint, render, ffmpeg]
+license: MIT
+metadata:
+  hermes:
+    tags: [hyperframes-cli]
 ---
 
 # HyperFrames CLI — Dev Loop

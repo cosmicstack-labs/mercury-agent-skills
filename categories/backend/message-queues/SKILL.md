@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [message-queues, kafka, rabbitmq, sqs, event-streaming]
+license: MIT
+metadata:
+  hermes:
+    tags: [message-queues]
 ---
 
 # Message Queues

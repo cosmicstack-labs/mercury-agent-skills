@@ -6,6 +6,10 @@ metadata:
   version: 2.0.0
   category: automation
   tags: [playwright, screenshot, browser-automation, web-capture, testing, selenium]
+license: MIT
+metadata:
+  hermes:
+    tags: [screenshot]
 ---
 
 # Screenshot Skill

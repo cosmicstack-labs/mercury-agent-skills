@@ -12,6 +12,10 @@ metadata:
     - prompt-engineering
     - experimentation
     - llm-ops
+license: MIT
+metadata:
+  hermes:
+    tags: [prompt-version-management]
 ---
 
 # Prompt Version Management & A/B Testing

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: devops
   tags: [terraform, iac, infrastructure, cloud, devops]
+license: MIT
+metadata:
+  hermes:
+    tags: [terraform-iac]
 ---
 
 # Terraform / Infrastructure as Code

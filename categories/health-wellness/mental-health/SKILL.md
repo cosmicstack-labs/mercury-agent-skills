@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: health-wellness
   tags: [mental-health, mindfulness, stress, wellness, self-care]
+license: MIT
+metadata:
+  hermes:
+    tags: [mental-health]
 ---
 
 # Mental Health

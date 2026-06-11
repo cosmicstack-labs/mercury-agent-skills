@@ -15,6 +15,10 @@ metadata:
     - elevenlabs
     - voiceover
     - social-media
+license: MIT
+metadata:
+  hermes:
+    tags: [github-repo-promo]
 ---
 
 # GitHub Repo Promo Video

@@ -16,6 +16,10 @@ metadata:
     - financials
     - restaurant-metrics
     - business-intelligence
+license: MIT
+metadata:
+  hermes:
+    tags: [daily-pulse]
 ---
 
 # Daily Pulse

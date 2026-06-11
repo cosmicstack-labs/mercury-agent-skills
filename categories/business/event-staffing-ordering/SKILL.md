@@ -17,6 +17,10 @@ metadata:
     - staffing
     - compliance
     - hospitality
+license: MIT
+metadata:
+  hermes:
+    tags: [event-staffing-ordering]
 ---
 
 # Ordering Event Staffing Through TempGuru

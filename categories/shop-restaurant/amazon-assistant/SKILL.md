@@ -16,6 +16,10 @@ metadata:
     - orders
     - deals
     - spending-insights
+license: MIT
+metadata:
+  hermes:
+    tags: [amazon-assistant]
 ---
 
 # Amazon Assistant 🛒

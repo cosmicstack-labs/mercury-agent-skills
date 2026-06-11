@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: presentation
   tags: [pitch-deck, fundraising, startup, y-combinator, product-hunt, presentations]
+license: MIT
+metadata:
+  hermes:
+    tags: [pitch-deck-creation]
 ---
 
 # Pitch Deck Creation

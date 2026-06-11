@@ -12,6 +12,10 @@ metadata:
     - fallback-strategies
     - fault-tolerance
     - graceful-degradation
+license: MIT
+metadata:
+  hermes:
+    tags: [error-recovery-retry]
 ---
 
 # Error Recovery & Retry Logic for Agents

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: mobile
   tags: [react-native, mobile, cross-platform, javascript, react]
+license: MIT
+metadata:
+  hermes:
+    tags: [react-native-patterns]
 ---
 
 # React Native Patterns

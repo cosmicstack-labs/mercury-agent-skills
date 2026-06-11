@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: health-wellness
   tags: [nutrition, health, diet, meal-prep, wellness]
+license: MIT
+metadata:
+  hermes:
+    tags: [nutrition-planning]
 ---
 
 # Nutrition Planning

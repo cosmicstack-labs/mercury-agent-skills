@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: career
   tags: [salary, negotiation, career, compensation, offers]
+license: MIT
+metadata:
+  hermes:
+    tags: [salary-negotiation]
 ---
 
 # Salary Negotiation

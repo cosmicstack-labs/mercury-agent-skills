@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: devops
   tags: [kubernetes, k8s, devops, containers, orchestration]
+license: MIT
+metadata:
+  hermes:
+    tags: [kubernetes-patterns]
 ---
 
 # Kubernetes Patterns

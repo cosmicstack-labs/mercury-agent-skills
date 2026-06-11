@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [caching, performance, redis, cdn, distributed-systems]
+license: MIT
+metadata:
+  hermes:
+    tags: [caching-strategies]
 ---
 
 # Caching Strategies

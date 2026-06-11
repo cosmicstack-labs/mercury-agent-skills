@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [design-systems, components, react, accessibility, design-tokens, storybook]
+license: MIT
+metadata:
+  hermes:
+    tags: [component-design-systems]
 ---
 
 # Component Design Systems

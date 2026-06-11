@@ -12,6 +12,10 @@ metadata:
     - cross-referencing
     - agent-memory
     - personal-knowledge-graph
+license: MIT
+metadata:
+  hermes:
+    tags: [gbrain-lite]
 ---
 
 # GBrain Lite — Lightweight Personal Knowledge Base

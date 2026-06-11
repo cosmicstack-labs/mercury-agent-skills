@@ -14,6 +14,10 @@ metadata:
     - content-distribution
     - ai-content
     - editorial-strategy
+license: MIT
+metadata:
+  hermes:
+    tags: [content-creation]
 ---
 
 # Content Creation

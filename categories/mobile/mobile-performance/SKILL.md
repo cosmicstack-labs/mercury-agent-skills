@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: mobile
   tags: [mobile, performance, profiling, optimization, ios, android]
+license: MIT
+metadata:
+  hermes:
+    tags: [mobile-performance]
 ---
 
 # Mobile Performance

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: media-download
   tags: [video-download, yt-dlp, youtube-downloader, media-download, bilibili]
+license: MIT
+metadata:
+  hermes:
+    tags: [video-downloader]
 ---
 
 # Video Downloader

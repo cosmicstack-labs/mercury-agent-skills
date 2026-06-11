@@ -17,6 +17,10 @@ metadata:
     - data-observability
     - orchestration
     - medallion-architecture
+license: MIT
+metadata:
+  hermes:
+    tags: [data-pipeline]
 ---
 
 # Data Pipeline Design

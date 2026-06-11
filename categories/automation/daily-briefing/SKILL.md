@@ -12,6 +12,10 @@ metadata:
     - cron-automation
     - knowledge-base
     - speech-synthesis
+license: MIT
+metadata:
+  hermes:
+    tags: [daily-briefing]
 ---
 
 # Daily AI Audio Briefing

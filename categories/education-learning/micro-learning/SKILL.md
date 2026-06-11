@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: education-learning
   tags: [micro-learning, education, mobile-learning, engagement, training]
+license: MIT
+metadata:
+  hermes:
+    tags: [micro-learning]
 ---
 
 # Micro-Learning

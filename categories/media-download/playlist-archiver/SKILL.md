@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: media-download
   tags: [playlist-archiver, playlist-backup, channel-archive, offline-media, scheduling]
+license: MIT
+metadata:
+  hermes:
+    tags: [playlist-archiver]
 ---
 
 # Playlist Archiver

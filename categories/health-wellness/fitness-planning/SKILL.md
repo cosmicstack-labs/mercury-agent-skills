@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: health-wellness
   tags: [fitness, health, workout, exercise, strength-training]
+license: MIT
+metadata:
+  hermes:
+    tags: [fitness-planning]
 ---
 
 # Fitness Planning

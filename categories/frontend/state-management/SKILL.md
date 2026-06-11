@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [state-management, react, zustand, redux, jotai, xstate, frontend-architecture]
+license: MIT
+metadata:
+  hermes:
+    tags: [state-management]
 ---
 
 # State Management

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: education-learning
   tags: [teaching, education, methods, pedagogy, instruction]
+license: MIT
+metadata:
+  hermes:
+    tags: [teaching-methods]
 ---
 
 # Teaching Methods

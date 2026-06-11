@@ -17,6 +17,10 @@ metadata:
     - rbac
     - jwt
     - oauth2
+license: MIT
+metadata:
+  hermes:
+    tags: [secure-coding]
 ---
 
 # Secure Coding Skill

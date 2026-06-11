@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [serverless, lambda, cloud, aws, event-driven]
+license: MIT
+metadata:
+  hermes:
+    tags: [serverless-patterns]
 ---
 
 # Serverless Patterns

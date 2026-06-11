@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [clean-code, refactoring, best-practices, readability, maintainability]
+license: MIT
+metadata:
+  hermes:
+    tags: [clean-code]
 ---
 
 # Clean Code

@@ -19,6 +19,10 @@ metadata:
     - OKRs
     - stakeholder-management
     - prioritization
+license: MIT
+metadata:
+  hermes:
+    tags: [product-strategy]
 ---
 
 # Product Strategy

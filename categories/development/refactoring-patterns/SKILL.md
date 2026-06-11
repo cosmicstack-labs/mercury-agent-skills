@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [refactoring, code-quality, patterns, legacy, modernization]
+license: MIT
+metadata:
+  hermes:
+    tags: [refactoring-patterns]
 ---
 
 # Refactoring Patterns

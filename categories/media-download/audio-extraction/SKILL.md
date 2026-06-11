@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: media-download
   tags: [audio-extraction, mp3-conversion, audio-conversion, ffmpeg, music]
+license: MIT
+metadata:
+  hermes:
+    tags: [audio-extraction]
 ---
 
 # Audio Extraction

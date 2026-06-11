@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: education-learning
   tags: [education, curriculum, learning, instructional-design, teaching]
+license: MIT
+metadata:
+  hermes:
+    tags: [curriculum-design]
 ---
 
 # Curriculum Design

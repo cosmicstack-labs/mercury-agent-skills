@@ -13,6 +13,10 @@ metadata:
     - agent-tracing
     - reporting
     - governance
+license: MIT
+metadata:
+  hermes:
+    tags: [agent-audit-logging]
 ---
 
 # Agent Audit Log Reporting

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [performance, web-vitals, lighthouse, optimization, caching, core-web-vitals]
+license: MIT
+metadata:
+  hermes:
+    tags: [web-performance]
 ---
 
 # Web Performance

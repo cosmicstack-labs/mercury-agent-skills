@@ -13,6 +13,10 @@ metadata:
     - business-process
     - orchestration
     - monitoring
+license: MIT
+metadata:
+  hermes:
+    tags: [workflow-automation]
 ---
 
 # Workflow Automation

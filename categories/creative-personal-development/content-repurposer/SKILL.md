@@ -12,6 +12,10 @@ metadata:
     - social-media
     - newsletter
     - productivity
+license: MIT
+metadata:
+  hermes:
+    tags: [content-repurposer]
 ---
 
 # Content Repurposer

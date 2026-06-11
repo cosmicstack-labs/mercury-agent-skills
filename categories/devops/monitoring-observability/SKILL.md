@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: devops
   tags: [monitoring, observability, prometheus, grafana, logging, tracing]
+license: MIT
+metadata:
+  hermes:
+    tags: [monitoring-observability]
 ---
 
 # Monitoring & Observability

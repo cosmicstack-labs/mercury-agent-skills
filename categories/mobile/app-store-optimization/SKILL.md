@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: mobile
   tags: [aso, app-store, mobile, marketing, conversion]
+license: MIT
+metadata:
+  hermes:
+    tags: [app-store-optimization]
 ---
 
 # App Store Optimization (ASO)

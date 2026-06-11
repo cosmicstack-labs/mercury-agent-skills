@@ -15,6 +15,10 @@ metadata:
     - openclaw
     - tweetclaw
     - hermes-agent
+license: MIT
+metadata:
+  hermes:
+    tags: [x-twitter-automation]
 ---
 
 # X/Twitter Automation

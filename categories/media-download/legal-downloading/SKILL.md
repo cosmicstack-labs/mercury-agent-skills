@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: media-download
   tags: [legal-downloading, copyright-compliance, offline-access, podcast-tools, fair-use]
+license: MIT
+metadata:
+  hermes:
+    tags: [legal-downloading]
 ---
 
 # Legal Downloading
