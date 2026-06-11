@@ -9,6 +9,9 @@ metadata:
   tags: [markdown, pdf, cjk, reportlab, typesetting, themes, any2pdf]
   source: https://github.com/lovstudio/any2pdf
   license: MIT
+metadata:
+  hermes:
+    tags: [any2pdf]
 ---
 
 # any2pdf — Markdown to Professionally Typeset PDF

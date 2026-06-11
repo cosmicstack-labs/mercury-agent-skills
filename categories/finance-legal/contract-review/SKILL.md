@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: finance-legal
   tags: [contract, legal, review, negotiation, compliance]
+license: MIT
+metadata:
+  hermes:
+    tags: [contract-review]
 ---
 
 # Contract Review

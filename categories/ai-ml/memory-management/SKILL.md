@@ -13,6 +13,10 @@ metadata:
     - rag
     - long-running-agents
     - memory-consolidation
+license: MIT
+metadata:
+  hermes:
+    tags: [memory-management]
 ---
 
 # Memory Management for Long-Running Agents

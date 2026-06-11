@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [git, version-control, branching, code-review, collaboration]
+license: MIT
+metadata:
+  hermes:
+    tags: [git-workflow]
 ---
 
 # Git Workflow

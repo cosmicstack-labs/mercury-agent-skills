@@ -12,6 +12,10 @@ metadata:
     - decision-making
     - creativity
     - product-development
+license: MIT
+metadata:
+  hermes:
+    tags: [idea-validator]
 ---
 
 # Idea Validator

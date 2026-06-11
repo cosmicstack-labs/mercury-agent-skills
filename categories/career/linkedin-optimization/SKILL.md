@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: career
   tags: [linkedin, career, networking, personal-brand, social-media]
+license: MIT
+metadata:
+  hermes:
+    tags: [linkedin-optimization]
 ---
 
 # LinkedIn Optimization

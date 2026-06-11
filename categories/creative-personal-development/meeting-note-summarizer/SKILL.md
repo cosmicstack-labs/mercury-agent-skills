@@ -12,6 +12,10 @@ metadata:
     - action-items
     - remote-work
     - async-communication
+license: MIT
+metadata:
+  hermes:
+    tags: [meeting-note-summarizer]
 ---
 
 # Meeting Note Summarizer

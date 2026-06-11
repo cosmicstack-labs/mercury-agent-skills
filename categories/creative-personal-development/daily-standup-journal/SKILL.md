@@ -12,6 +12,10 @@ metadata:
     - productivity
     - habits
     - retrospectives
+license: MIT
+metadata:
+  hermes:
+    tags: [daily-standup-journal]
 ---
 
 # Daily Standup & Journal

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [tailwind, css, responsive-design, utility-css, styling]
+license: MIT
+metadata:
+  hermes:
+    tags: [tailwind-css]
 ---
 
 # Tailwind CSS

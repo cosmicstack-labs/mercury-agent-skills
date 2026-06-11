@@ -12,6 +12,10 @@ metadata:
     - workload-distribution
     - agent-orchestration
     - scaling
+license: MIT
+metadata:
+  hermes:
+    tags: [agent-task-delegation]
 ---
 
 # Agent Task Delegation & Load Balancing

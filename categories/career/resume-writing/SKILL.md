@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: career
   tags: [resume, career, job-search, ats, cv]
+license: MIT
+metadata:
+  hermes:
+    tags: [resume-writing]
 ---
 
 # Resume Writing

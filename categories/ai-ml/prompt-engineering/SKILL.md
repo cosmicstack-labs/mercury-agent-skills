@@ -12,6 +12,10 @@ metadata:
     - few-shot
     - structured-outputs
     - ai-patterns
+license: MIT
+metadata:
+  hermes:
+    tags: [prompt-engineering]
 ---
 
 # Prompt Engineering

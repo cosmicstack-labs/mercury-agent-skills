@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: presentation
   tags: [presentation, slide-design, storyboarding, visual-design, presentations]
+license: MIT
+metadata:
+  hermes:
+    tags: [presentation-design]
 ---
 
 # Presentation Design & Storyboarding

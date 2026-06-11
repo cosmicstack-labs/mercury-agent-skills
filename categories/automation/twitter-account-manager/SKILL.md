@@ -17,6 +17,10 @@ metadata:
     - prompt-injection-defense
     - educational
     - research
+license: MIT
+metadata:
+  hermes:
+    tags: [twitter-account-manager]
 ---
 
 # Twitter Account Manager 🧪

@@ -13,6 +13,10 @@ metadata:
     - orchestration
     - planning
     - llm
+license: MIT
+metadata:
+  hermes:
+    tags: [ai-agent-design]
 ---
 
 # AI Agent Design

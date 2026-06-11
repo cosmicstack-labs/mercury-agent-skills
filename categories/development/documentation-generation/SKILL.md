@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [documentation, api-docs, readme, technical-writing, automation]
+license: MIT
+metadata:
+  hermes:
+    tags: [documentation-generation]
 ---
 
 # Documentation Generation

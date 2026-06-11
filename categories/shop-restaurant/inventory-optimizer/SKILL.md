@@ -15,6 +15,10 @@ metadata:
     - stock-management
     - wastage-reduction
     - restaurant-operations
+license: MIT
+metadata:
+  hermes:
+    tags: [inventory-optimizer]
 ---
 
 # Inventory Optimizer

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: devops
   tags: [sre, reliability, slo, incident-response, postmortem]
+license: MIT
+metadata:
+  hermes:
+    tags: [sre-practices]
 ---
 
 # SRE Practices

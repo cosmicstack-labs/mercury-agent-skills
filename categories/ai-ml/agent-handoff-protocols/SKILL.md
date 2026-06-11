@@ -12,6 +12,10 @@ metadata:
     - multi-agent
     - conversation-routing
     - agent-communication
+license: MIT
+metadata:
+  hermes:
+    tags: [agent-handoff-protocols]
 ---
 
 # Agent-to-Agent Handoff Protocols

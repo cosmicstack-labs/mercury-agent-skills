@@ -16,6 +16,10 @@ metadata:
     - dependency-scanning
     - cvss
     - stride
+license: MIT
+metadata:
+  hermes:
+    tags: [security-audit]
 ---
 
 # Security Audit Skill

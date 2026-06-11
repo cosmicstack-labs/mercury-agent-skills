@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: pdf-generation
   tags: [latex, typesetting, academic, document-preparation, pdf]
+license: MIT
+metadata:
+  hermes:
+    tags: [typesetting-latex]
 ---
 
 # LaTeX Typesetting

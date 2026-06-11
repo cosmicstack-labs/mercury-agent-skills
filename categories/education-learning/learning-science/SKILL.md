@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: education-learning
   tags: [learning, science, memory, study-techniques, education]
+license: MIT
+metadata:
+  hermes:
+    tags: [learning-science]
 ---
 
 # Learning Science

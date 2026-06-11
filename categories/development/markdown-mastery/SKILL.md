@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [markdown, mermaid, diagrams, formatting, documentation]
+license: MIT
+metadata:
+  hermes:
+    tags: [markdown-mastery]
 ---
 
 # Markdown Mastery

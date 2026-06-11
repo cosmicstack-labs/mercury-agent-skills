@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: finance-legal
   tags: [budgeting, forecasting, finance, planning, variance]
+license: MIT
+metadata:
+  hermes:
+    tags: [budgeting-forecasting]
 ---
 
 # Budgeting & Forecasting

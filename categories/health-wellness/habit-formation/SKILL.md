@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: health-wellness
   tags: [habits, behavior-change, productivity, atomic-habits, self-improvement]
+license: MIT
+metadata:
+  hermes:
+    tags: [habit-formation]
 ---
 
 # Habit Formation

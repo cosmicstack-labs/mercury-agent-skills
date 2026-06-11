@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [api, rest, graphql, design, documentation, error-handling]
+license: MIT
+metadata:
+  hermes:
+    tags: [api-design]
 ---
 
 # API Design

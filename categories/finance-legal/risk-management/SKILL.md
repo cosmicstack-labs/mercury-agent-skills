@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: finance-legal
   tags: [risk, management, compliance, audit, business-continuity]
+license: MIT
+metadata:
+  hermes:
+    tags: [risk-management]
 ---
 
 # Risk Management

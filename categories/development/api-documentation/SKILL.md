@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [api-documentation, openapi, swagger, postman, api-reference]
+license: MIT
+metadata:
+  hermes:
+    tags: [api-documentation]
 ---
 
 # API Documentation

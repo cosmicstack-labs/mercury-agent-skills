@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: pdf-generation
   tags: [invoice, pdf-generation, business-documents, contracts, forms]
+license: MIT
+metadata:
+  hermes:
+    tags: [invoice-document-pdf]
 ---
 
 # Invoice & Document PDF Generation

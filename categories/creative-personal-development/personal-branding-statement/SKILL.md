@@ -12,6 +12,10 @@ metadata:
     - bio
     - messaging
     - freelancing
+license: MIT
+metadata:
+  hermes:
+    tags: [personal-branding-statement]
 ---
 
 # Personal Branding Statement Generator

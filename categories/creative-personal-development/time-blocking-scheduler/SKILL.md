@@ -12,6 +12,10 @@ metadata:
     - scheduling
     - routines
     - focus
+license: MIT
+metadata:
+  hermes:
+    tags: [time-blocking-scheduler]
 ---
 
 # Time Blocking & Scheduling Assistant

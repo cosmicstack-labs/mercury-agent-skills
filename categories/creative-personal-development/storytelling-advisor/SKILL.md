@@ -12,6 +12,10 @@ metadata:
     - communication
     - structure
     - frameworks
+license: MIT
+metadata:
+  hermes:
+    tags: [storytelling-advisor]
 ---
 
 # Storytelling Advisor

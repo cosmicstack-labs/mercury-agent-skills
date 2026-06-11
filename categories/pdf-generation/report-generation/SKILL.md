@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: pdf-generation
   tags: [report-generation, pdf-report, data-to-pdf, templating, business-reports]
+license: MIT
+metadata:
+  hermes:
+    tags: [report-generation]
 ---
 
 # Report Generation

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: testing-qa
   tags: [e2e, testing, playwright, cypress, automation]
+license: MIT
+metadata:
+  hermes:
+    tags: [e2e-testing]
 ---
 
 # E2E Testing

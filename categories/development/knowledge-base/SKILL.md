@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [knowledge-base, wiki, internal-docs, knowledge-management, documentation]
+license: MIT
+metadata:
+  hermes:
+    tags: [knowledge-base]
 ---
 
 # Knowledge Base Creation

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [database, sql, nosql, schema, indexing, migrations]
+license: MIT
+metadata:
+  hermes:
+    tags: [database-design]
 ---
 
 # Database Design

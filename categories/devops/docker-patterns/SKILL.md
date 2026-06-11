@@ -14,6 +14,10 @@ metadata:
     - dockerfile
     - docker-compose
     - multi-stage-builds
+license: MIT
+metadata:
+  hermes:
+    tags: [docker-patterns]
 ---
 
 # Docker Patterns: Production-Grade Containerization

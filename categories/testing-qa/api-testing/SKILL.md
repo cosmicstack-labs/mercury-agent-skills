@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: testing-qa
   tags: [api, testing, rest, graphql, contract-testing]
+license: MIT
+metadata:
+  hermes:
+    tags: [api-testing]
 ---
 
 # API Testing

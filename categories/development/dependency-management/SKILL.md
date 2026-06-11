@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [dependencies, package-management, security, monorepo, upgrades]
+license: MIT
+metadata:
+  hermes:
+    tags: [dependency-management]
 ---
 
 # Dependency Management

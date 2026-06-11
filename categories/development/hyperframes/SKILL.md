@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [hyperframes, video, animation, gsap, html-composition, video-rendering, heygen, captions, tts, transitions]
+license: MIT
+metadata:
+  hermes:
+    tags: [hyperframes]
 ---
 
 # HyperFrames — Video Composition Authoring

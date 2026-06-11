@@ -15,6 +15,10 @@ metadata:
     - workforce
     - scheduling
     - restaurant-operations
+license: MIT
+metadata:
+  hermes:
+    tags: [staff-scheduler]
 ---
 
 # Staff Scheduler

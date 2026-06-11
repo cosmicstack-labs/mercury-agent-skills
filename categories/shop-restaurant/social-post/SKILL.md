@@ -16,6 +16,10 @@ metadata:
     - tiktok
     - facebook
     - restaurant-marketing
+license: MIT
+metadata:
+  hermes:
+    tags: [social-post]
 ---
 
 # Social Post

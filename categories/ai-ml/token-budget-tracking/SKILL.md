@@ -12,6 +12,10 @@ metadata:
     - budget-alerting
     - llm-costs
     - resource-management
+license: MIT
+metadata:
+  hermes:
+    tags: [token-budget-tracking]
 ---
 
 # Token Budget Tracking & Optimization

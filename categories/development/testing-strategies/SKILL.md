@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [testing, unit-tests, integration-tests, e2e, property-based-testing, mutation-testing]
+license: MIT
+metadata:
+  hermes:
+    tags: [testing-strategies]
 ---
 
 # Testing Strategies

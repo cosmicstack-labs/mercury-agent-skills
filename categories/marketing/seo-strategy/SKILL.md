@@ -14,6 +14,10 @@ metadata:
     - analytics
     - organic-traffic
     - link-building
+license: MIT
+metadata:
+  hermes:
+    tags: [seo-strategy]
 ---
 
 # SEO Strategy

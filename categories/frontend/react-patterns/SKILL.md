@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [react, hooks, state-management, performance, components]
+license: MIT
+metadata:
+  hermes:
+    tags: [react-patterns]
 ---
 
 # React Patterns

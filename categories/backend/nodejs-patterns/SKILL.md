@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [nodejs, backend, javascript, async, server]
+license: MIT
+metadata:
+  hermes:
+    tags: [nodejs-patterns]
 ---
 
 # Node.js Patterns

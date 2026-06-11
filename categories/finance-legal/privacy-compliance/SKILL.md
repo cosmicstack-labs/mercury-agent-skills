@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: finance-legal
   tags: [privacy, compliance, gdpr, ccpa, hipaa, data-protection]
+license: MIT
+metadata:
+  hermes:
+    tags: [privacy-compliance]
 ---
 
 # Privacy & Compliance

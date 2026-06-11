@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [python, type-hints, async, testing, best-practices]
+license: MIT
+metadata:
+  hermes:
+    tags: [python-patterns]
 ---
 
 # Python Patterns

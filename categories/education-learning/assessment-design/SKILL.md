@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: education-learning
   tags: [assessment, education, evaluation, rubrics, feedback]
+license: MIT
+metadata:
+  hermes:
+    tags: [assessment-design]
 ---
 
 # Assessment Design

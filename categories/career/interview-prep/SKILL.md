@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: career
   tags: [interview, career, job-search, preparation, behavioral]
+license: MIT
+metadata:
+  hermes:
+    tags: [interview-prep]
 ---
 
 # Interview Prep

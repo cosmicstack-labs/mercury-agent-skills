@@ -17,6 +17,10 @@ metadata:
     - fundraising
     - metrics
     - team-building
+license: MIT
+metadata:
+  hermes:
+    tags: [startup-strategy]
 ---
 
 # Startup Strategy Skill

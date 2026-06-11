@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: mobile
   tags: [android, kotlin, jetpack-compose, mobile, google]
+license: MIT
+metadata:
+  hermes:
+    tags: [android-kotlin-patterns]
 ---
 
 # Android Kotlin Patterns

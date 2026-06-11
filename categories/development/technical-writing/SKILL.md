@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [technical-writing, sop, user-manual, documentation, guides]
+license: MIT
+metadata:
+  hermes:
+    tags: [technical-writing]
 ---
 
 # Technical Writing Mastery

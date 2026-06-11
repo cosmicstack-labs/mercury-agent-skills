@@ -16,6 +16,10 @@ metadata:
     - yelp
     - social-proof
     - hospitality
+license: MIT
+metadata:
+  hermes:
+    tags: [review-responder]
 ---
 
 # Review Responder

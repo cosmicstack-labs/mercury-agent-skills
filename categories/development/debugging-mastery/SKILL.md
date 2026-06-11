@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [debugging, troubleshooting, root-cause-analysis, logging, observability]
+license: MIT
+metadata:
+  hermes:
+    tags: [debugging-mastery]
 ---
 
 # Debugging Mastery

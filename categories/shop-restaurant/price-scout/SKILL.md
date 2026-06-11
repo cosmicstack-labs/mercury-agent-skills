@@ -16,6 +16,10 @@ metadata:
     - cost-reduction
     - vendor-analysis
     - purchasing
+license: MIT
+metadata:
+  hermes:
+    tags: [price-scout]
 ---
 
 # Price Scout

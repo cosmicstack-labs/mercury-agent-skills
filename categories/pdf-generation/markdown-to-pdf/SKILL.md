@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: pdf-generation
   tags: [markdown, pdf, pandoc, weasyprint, reportlab, conversion]
+license: MIT
+metadata:
+  hermes:
+    tags: [markdown-to-pdf]
 ---
 
 # Markdown to PDF Conversion

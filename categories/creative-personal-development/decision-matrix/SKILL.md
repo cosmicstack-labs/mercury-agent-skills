@@ -11,6 +11,10 @@ metadata:
     - productivity
     - strategy
     - prioritization
+license: MIT
+metadata:
+  hermes:
+    tags: [decision-matrix]
 ---
 
 # Decision Matrix

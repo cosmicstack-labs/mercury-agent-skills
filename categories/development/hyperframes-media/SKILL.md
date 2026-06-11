@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [hyperframes, media, tts, transcription, background-removal, kokoro, whisper, u2net, captions]
+license: MIT
+metadata:
+  hermes:
+    tags: [hyperframes-media]
 ---
 
 # HyperFrames Media Preprocessing

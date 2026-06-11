@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: career
   tags: [career, planning, growth, development, goals]
+license: MIT
+metadata:
+  hermes:
+    tags: [career-planning]
 ---
 
 # Career Planning

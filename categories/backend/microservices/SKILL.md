@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: backend
   tags: [microservices, architecture, distributed-systems, event-sourcing, cqrs]
+license: MIT
+metadata:
+  hermes:
+    tags: [microservices]
 ---
 
 # Microservices

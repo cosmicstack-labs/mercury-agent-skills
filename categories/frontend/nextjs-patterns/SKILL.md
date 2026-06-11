@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [nextjs, react, server-components, app-router, full-stack, ssr, ssg, isr]
+license: MIT
+metadata:
+  hermes:
+    tags: [nextjs-patterns]
 ---
 
 # Next.js Patterns

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: frontend
   tags: [responsive-design, css, mobile-first, container-queries, accessibility, tailwind]
+license: MIT
+metadata:
+  hermes:
+    tags: [responsive-design]
 ---
 
 # Responsive Design

@@ -12,6 +12,10 @@ metadata:
     - health-checks
     - incident-response
     - production-agents
+license: MIT
+metadata:
+  hermes:
+    tags: [agent-health-monitoring]
 ---
 
 # Agent Health Monitoring & Alerting

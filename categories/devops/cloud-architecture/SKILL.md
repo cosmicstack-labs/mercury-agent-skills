@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: devops
   tags: [cloud, architecture, aws, gcp, azure, ha, dr]
+license: MIT
+metadata:
+  hermes:
+    tags: [cloud-architecture]
 ---
 
 # Cloud Architecture

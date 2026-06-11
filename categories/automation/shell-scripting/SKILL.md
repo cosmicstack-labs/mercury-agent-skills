@@ -13,6 +13,10 @@ metadata:
     - debugging
     - portability
     - automation
+license: MIT
+metadata:
+  hermes:
+    tags: [shell-scripting]
 ---
 
 # Shell Scripting

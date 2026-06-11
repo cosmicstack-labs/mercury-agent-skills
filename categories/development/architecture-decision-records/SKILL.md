@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: development
   tags: [adr, architecture, decisions, documentation, governance]
+license: MIT
+metadata:
+  hermes:
+    tags: [architecture-decision-records]
 ---
 
 # Architecture Decision Records

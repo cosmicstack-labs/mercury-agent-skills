@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: testing-qa
   tags: [accessibility, a11y, testing, wcag, inclusive]
+license: MIT
+metadata:
+  hermes:
+    tags: [accessibility-testing]
 ---
 
 # Accessibility Testing

@@ -6,6 +6,10 @@ metadata:
   version: 1.0.0
   category: health-wellness
   tags: [sleep, health, wellness, recovery, circadian]
+license: MIT
+metadata:
+  hermes:
+    tags: [sleep-optimization]
 ---
 
 # Sleep Optimization

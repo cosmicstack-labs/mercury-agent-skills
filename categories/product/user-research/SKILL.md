@@ -18,6 +18,10 @@ metadata:
     - continuous-discovery
     - usability-testing
     - research-synthesis
+license: MIT
+metadata:
+  hermes:
+    tags: [user-research]
 ---
 
 # User Research
