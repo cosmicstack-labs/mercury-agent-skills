@@ -26,6 +26,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Documentation Generation | Technical documentation strategies, API docs, README patterns, and doc generation workflows | [SKILL.md](./categories/development/documentation-generation/SKILL.md) |
 | Refactoring Patterns | Systematic refactoring techniques, code smell elimination, pattern extraction, and legacy modernization | [SKILL.md](./categories/development/refactoring-patterns/SKILL.md) |
 | Dependency Management | Version pinning, vulnerability scanning, monorepo patterns, and upgrade workflows | [SKILL.md](./categories/development/dependency-management/SKILL.md) |
+| YYLO Ledger Tasks | Repository-local task board for coding-agent workflows: lifecycle commands with response-backed marks, dependency planning with ready/order, immutable cold archives, and receipt-reviewed multi-directory merges | [SKILL.md](./categories/development/ledger-tasks-yylo/SKILL.md) |
 
 ## Frontend
 
