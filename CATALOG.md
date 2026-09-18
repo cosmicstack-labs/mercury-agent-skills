@@ -84,6 +84,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Error Recovery & Retry | Exponential backoff, circuit breakers, stateful recovery, graceful degradation, and dead-letter queues | [SKILL.md](./categories/ai-ml/error-recovery-retry/SKILL.md) |
 || Agent Audit Logging | Structured audit events, traceability chains, compliance reporting, forensic analysis, and retention policies | [SKILL.md](./categories/ai-ml/agent-audit-logging/SKILL.md) |
 || GBrain Lite | Lightweight personal knowledge base with markdown + YAML frontmatter, full-text search, and cross-referencing for AI agents | [SKILL.md](./categories/ai-ml/gbrain-lite/SKILL.md) |
+| Agent Run Replay Forensics | Read a recording of a past agent run to answer what actually happened — recorded vs inferred causal edges, offline replay, model comparison | [SKILL.md](./categories/ai-ml/agent-run-replay-forensics/SKILL.md) |
 
 ## Security
 
