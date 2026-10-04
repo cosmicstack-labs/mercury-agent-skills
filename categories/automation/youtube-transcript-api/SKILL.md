@@ -142,8 +142,10 @@ Errors are JSON with a stable `code`:
 - `LANGUAGE_NOT_AVAILABLE` (404): drop the `language` parameter or pick another.
 - `PAYMENT_REQUIRED` (402): out of credits. Stop and tell the user.
 - `RATE_LIMITED` (429): back off before the next call.
-- `UPSTREAM_UNAVAILABLE`, `UPSTREAM_TIMEOUT` (503): transient. Retry once after a
-  short wait.
+- `CURSOR_EXPIRED` (400): a `continuation_token` older than 24 hours. Restart from
+  the first page.
+- `UPSTREAM_UNAVAILABLE` (503) and `UPSTREAM_TIMEOUT` (504, after 25 seconds, not
+  charged): transient. Retry once after a short wait.
 
 ## Evaluation Rubric
 
