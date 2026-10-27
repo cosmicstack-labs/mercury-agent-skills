@@ -75,6 +75,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Prompt Engineering | Advanced prompting patterns and techniques | [SKILL.md](./categories/ai-ml/prompt-engineering/SKILL.md) |
 | AI Agent Design | Agent architecture, tools, memory, orchestration | [SKILL.md](./categories/ai-ml/ai-agent-design/SKILL.md) |
 | RouterBase Model Gateway | OpenAI compatible model gateway configuration, routing, fallback, and media generation patterns | [SKILL.md](./categories/ai-ml/routerbase-model-gateway/SKILL.md) |
+| Bifrost Gateway | Self-hosted, open-source AI gateway setup: multi-provider routing, fallbacks, virtual keys and budgets, semantic caching, observability, and MCP tools | [SKILL.md](./categories/ai-ml/bifrost-gateway/SKILL.md) |
 | Agent Health Monitoring | Liveness checks, anomaly detection, alerting, and observability dashboards for production agent fleets | [SKILL.md](./categories/ai-ml/agent-health-monitoring/SKILL.md) |
 | Prompt Version Management | Prompt version control, A/B testing, canary rollouts, and automated evaluation | [SKILL.md](./categories/ai-ml/prompt-version-management/SKILL.md) |
 | Agent Task Delegation | Task queue management, load balancing, priority scheduling, and dynamic scaling for multi-agent systems | [SKILL.md](./categories/ai-ml/agent-task-delegation/SKILL.md) |
